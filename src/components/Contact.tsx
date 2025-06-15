@@ -10,7 +10,7 @@ const Contact = () => {
         I'm currently open to new opportunities and collaborations. If you have a project in mind or just want to say hi, feel free to reach out.
       </p>
       <Button asChild size="lg">
-        <a href="mailto:johndoe@example.com">Say Hello</a>
+        <a href="mailto:tuk.tan.p@gmail.com">Say Hello</a>
       </Button>
     </section>
   );

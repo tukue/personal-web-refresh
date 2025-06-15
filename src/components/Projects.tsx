@@ -6,25 +6,25 @@ import { ArrowUpRight } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Project One',
-    description: 'A brief description of the first project, highlighting the key features and technologies used.',
+    title: 'Covid-19 Tracker',
+    description: 'A web app for tracking Covid-19 cases. Built with React, Material-UI, and Chart.js.',
     image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2071&auto=format&fit=crop',
-    tags: ['React', 'Next.js', 'Tailwind CSS'],
-    link: '#',
+    tags: ['React', 'Material-UI', 'Chart.js'],
+    link: 'https://github.com/tukue/covid-tracker',
   },
   {
-    title: 'Project Two',
-    description: 'A brief description of the second project, showcasing different skills and challenges overcome.',
+    title: 'Algo-trading with News',
+    description: 'A trading bot that uses news sentiment analysis to make trades. Built with Python, Alpaca, and NewsAPI.',
     image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop',
-    tags: ['Vite', 'TypeScript', 'Shadcn/UI'],
-    link: '#',
+    tags: ['Python', 'Alpaca', 'NewsAPI'],
+    link: 'https://github.com/tukue/algo-trading-with-news',
   },
   {
-    title: 'Project Three',
-    description: 'A summary of the third project, focusing on its impact and the learning outcomes.',
+    title: 'NFT Gallery',
+    description: 'A web app for viewing NFTs. Built with Next.js, Web3.js, and OpenSea API.',
     image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=2070&auto=format&fit=crop',
-    tags: ['Astro', 'Vue', 'MDX'],
-    link: '#',
+    tags: ['Next.js', 'Web3.js', 'OpenSea API'],
+    link: 'https://github.com/tukue/nft-gallery',
   },
 ];
 
