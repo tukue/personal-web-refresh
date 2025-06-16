@@ -1,6 +1,8 @@
 
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Resume from '@/components/Resume';
+import Education from '@/components/Education';
 import About from '@/components/About';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
@@ -13,8 +15,10 @@ const Index = () => {
       <main className="flex-grow">
         <div className="container mx-auto px-4 md:px-8">
           <Hero />
-          <About />
+          <Resume />
+          <Education />
           <Projects />
+          <About />
           <Contact />
         </div>
       </main>
