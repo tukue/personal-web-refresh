@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
@@ -8,7 +7,12 @@ import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { useToast } from '@/components/ui/use-toast';
-import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from '@/lib/emailjs';
+import { 
+  EMAILJS_SERVICE_ID, 
+  EMAILJS_TEMPLATE_ID, 
+  EMAILJS_PUBLIC_KEY,
+  EMAILJS_DESTINATION_EMAIL 
+} from '@/lib/emailjs';
 
 const Contact = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -24,6 +28,7 @@ const Contact = () => {
       {
         from_name: data.name,
         from_email: data.email,
+        to_email: EMAILJS_DESTINATION_EMAIL,
         subject: data.subject,
         message: data.message
       },
@@ -54,9 +59,8 @@ const Contact = () => {
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-center">Get In Touch</h2>
         <p className="text-muted-foreground mb-12 max-w-2xl mx-auto text-center">
-          I'm currently open to new opportunities and collaborations. If you have a project in mind or just want to say hi, feel free to reach out.
+          I am currently open to new opportunities and collaborative projects. If you have something in mind or would simply like to connect, feel free to get in touch.
         </p>
-        
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Contact Information */}
           <Card>

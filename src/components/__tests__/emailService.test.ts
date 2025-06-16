@@ -10,6 +10,7 @@ vi.mock('@emailjs/browser', () => ({
 
 // Import after mocking
 import emailjs from '@emailjs/browser';
+import { EMAILJS_DESTINATION_EMAIL } from '@/lib/emailjs';
 
 // Mock constants
 const SERVICE_ID = 'test-service-id';
@@ -39,6 +40,7 @@ describe('Email Service', () => {
       {
         from_name: mockData.name,
         from_email: mockData.email,
+        to_email: EMAILJS_DESTINATION_EMAIL,
         subject: mockData.subject,
         message: mockData.message
       },
@@ -52,6 +54,7 @@ describe('Email Service', () => {
       {
         from_name: mockData.name,
         from_email: mockData.email,
+        to_email: EMAILJS_DESTINATION_EMAIL,
         subject: mockData.subject,
         message: mockData.message
       },
