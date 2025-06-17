@@ -1,73 +1,100 @@
-# Welcome to your Lovable project
+# Tukue's Portfolio Website
 
-## Project info
+A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/a97721ae-7954-40c2-9ef3-07d34cece83f
+## Project Overview
 
-## How can I edit this code?
+This portfolio showcases my experience as a Senior DevOps Engineer and Backend Developer, featuring my projects, skills, and professional background.
 
-There are several ways of editing your application.
+## Technologies Used
 
-**Use Lovable**
+- **React 18** with TypeScript
+- **Vite** for fast development and optimized builds
+- **Tailwind CSS** for styling
+- **shadcn/ui** for UI components
+- **React Router** for navigation
+- **EmailJS** for contact form functionality
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a97721ae-7954-40c2-9ef3-07d34cece83f) and start prompting.
+## Development
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+To run this project locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/tukue/personal-web-refresh.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd personal-web-refresh
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Deployment with Netlify
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This project is configured for easy deployment to Netlify. You can deploy in one of two ways:
 
-**Use GitHub Codespaces**
+### Option 1: Deploy from the Netlify UI
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Create a Netlify account at [netlify.com](https://www.netlify.com/) if you don't have one
+2. Click "New site from Git"
+3. Connect to your GitHub account and select this repository
+4. Configure the build settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+5. Click "Deploy site"
 
-## What technologies are used for this project?
+### Option 2: Deploy using Netlify CLI
 
-This project is built with:
+1. Install the Netlify CLI globally:
+   ```sh
+   npm install -g netlify-cli
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+2. Log in to your Netlify account:
+   ```sh
+   netlify login
+   ```
 
-## How can I deploy this project?
+3. Initialize Netlify in your project:
+   ```sh
+   netlify init
+   ```
 
-Simply open [Lovable](https://lovable.dev/projects/a97721ae-7954-40c2-9ef3-07d34cece83f) and click on Share -> Publish.
+4. Follow the prompts to configure your site settings
+5. Deploy your site:
+   ```sh
+   netlify deploy --prod
+   ```
 
-## Can I connect a custom domain to my Lovable project?
+### Environment Variables
 
-Yes, you can!
+For the contact form functionality, you'll need to set up the following environment variables in Netlify:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Go to your site settings in Netlify
+2. Navigate to "Build & deploy" > "Environment"
+3. Add the following variables:
+   - `VITE_EMAILJS_SERVICE_ID`: Your EmailJS service ID
+   - `VITE_EMAILJS_TEMPLATE_ID`: Your EmailJS template ID
+   - `VITE_EMAILJS_PUBLIC_KEY`: Your EmailJS public key
+   - `VITE_EMAILJS_DESTINATION_EMAIL`: Your destination email address
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Custom Domain Setup
+
+To connect a custom domain to your Netlify deployment:
+
+1. Go to your site settings in Netlify
+2. Navigate to "Domain management" > "Domains" 
+3. Click "Add custom domain"
+4. Follow the instructions to configure your DNS settings
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+Tukue Gebremariam - [tukue.geb@gmail.com](mailto:tukue.geb@gmail.com)
