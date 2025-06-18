@@ -74,7 +74,7 @@ const projects = [
       'API Gateway implementation with Spring Cloud Gateway'
     ],
     tags: ['Spring Boot', 'Kubernetes', 'RabbitMQ', 'Docker', 'AWS'],
-    githubUrl: null,
+    githubUrl: 'https://github.com/tukue/ecommerce-api',
     demoUrl: '#'
   },
   {
