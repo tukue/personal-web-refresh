@@ -32,12 +32,11 @@ const Hero = () => {
       </div>
       <div className="flex gap-6 mt-12 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
         <a href="https://github.com/tukue" target="_blank" rel="noopener noreferrer" aria-label="Github" className="text-muted-foreground hover:text-primary transition-colors"><Github size={24} /></a>
-        <a href="https://linkedin.com/in/tukue" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin size={24} /></a>
-        <a href="https://twitter.com/tukue_tan" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors"><Twitter size={24} /></a>
+        <a href="https://www.linkedin.com/in/tukuegebremariam/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin size={24} /></a>
         <a href="mailto:tukue.geb@gmail.com" aria-label="Email" className="text-muted-foreground hover:text-primary transition-colors"><Mail size={24} /></a>
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default Hero
