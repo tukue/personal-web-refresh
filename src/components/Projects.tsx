@@ -17,7 +17,7 @@ const projects = [
       'Security Hub for security findings and compliance'
     ],
     tags: ['AWS', 'CloudFormation', 'Lambda', 'Step Functions', 'X-Ray', 'Security Hub'],
-    githubUrl: null,
+    githubUrl: 'company URL',
     demoUrl: '#',
     featured: true
   },
@@ -42,9 +42,62 @@ const projects = [
     githubUrl: 'https://github.com/tukue/reactcon',
     demoUrl: '#'
   },
+    {
+  "title": "DevOps Infrastructure Automation on AWS with Terraform, Ansible, and GitOps Tools",
+  "description": "Designed and automated a complete DevOps infrastructure on AWS using Terraform, Terragrunt, Ansible, and ArgoCD. Ensured infrastructure compliance, scalability, and maintainability through Infrastructure as Code and security tooling.",
+  "details": [
+    "Provisioned AWS infrastructure including VPC, EC2, S3, IAM, and Route 53 using Terraform and Terragrunt",
+    "Automated Jenkins setup and software provisioning with Ansible playbooks",
+    "Integrated Terrascan for static code analysis and compliance scanning of IaC",
+    "Used ArgoCD for GitOps-style Kubernetes deployment configuration (if applicable)",
+    "Managed remote state with S3 backend and DynamoDB locking for safe IaC workflows",
+    "Enabled end-to-end CI/CD pipelines using Jenkins and GitHub integrations"
+  ],
+  "tags": [
+    "AWS", "Terraform", "Terragrunt", "Ansible", "Terrascan", "ArgoCD", "Jenkins", 
+    "CI/CD", "Infrastructure as Code", "DevOps", "Automation", "Scripting", 
+    "Infrastructure Management"
+  ],
+  "githubUrl": "https://github.com/tukue/terraform-jenkins-aws",
+  "demoUrl": "#"
+},
+{
+  "title": "Azure DevOps Automation with Terraform, Terragrunt & ArgoCD",
+  "description": "Automated the provisioning and configuration of Azure infrastructure using Terraform, Terragrunt, and shell scripting. Enhanced DevSecOps practices with Terrascan and streamlined deployment pipelines with ArgoCD for GitOps-driven workflows.",
+  "details": [
+    "Provisioned scalable Azure infrastructure using Terraform and Terragrunt for modular, maintainable IaC",
+    "Automated infrastructure configuration and software deployment via shell scripts",
+    "Integrated Terrascan for continuous security and compliance scanning of infrastructure code",
+    "Implemented GitOps deployment workflows using ArgoCD for Kubernetes resources",
+    "Enabled DevOps tech enablement through pipeline automation and infrastructure standardization"
+  ],
+  "tags": [
+    "Azure", "Terraform", "Terragrunt", "Shell Scripting", "Terrascan",
+    "ArgoCD", "DevOps", "DevSecOps", "Infrastructure as Code", "Automation"
+  ],
+  "githubUrl": "https://github.com/tukue/simpleAppProvisionAzure",
+  "demoUrl": "#"
+},
+{
+  "title": "Three-Tier Azure Infrastructure with Bicep & PowerShell",
+  "description": "Implemented a modular, secure three-tier architecture on Azure using Bicep templates and PowerShell scripts. The design includes network segmentation, private connectivity, and application monitoring, with a Terraform-like deployment workflow.",
+  "details": [
+    "Designed modular Bicep templates for reusable and maintainable infrastructure code",
+    "Automated deployment using PowerShell scripts following init, plan, and apply phases",
+    "Implemented network segmentation for enhanced security and private connectivity",
+    "Configured application monitoring and logging to ensure operational insights",
+    "Adopted Infrastructure as Code best practices for Azure cloud environments"
+  ],
+  "tags": [
+    "Azure", "Bicep", "PowerShell", "Infrastructure as Code", "Network Segmentation",
+    "Private Connectivity", "Application Monitoring", "DevOps", "Automation"
+  ],
+  "githubUrl": "https://github.com/tukue/AzureInfrastuctureAsCode",
+  "demoUrl": "#"
+},
   {
-    title: 'Cloud Monitoring Solution',
-    description: 'Implemented comprehensive monitoring solutions using Grafana, Prometheus, and the ELK Stack for cloud infrastructure visibility.',
+    title: 'Implmenting Monitoring Solution',
+    description: 'Implemented comprehensive monitoring solutions using Grafana, Prometheus, and the ELK Stack for kubernets infrastructure visibility.',
     details: [],
     tags: ['Grafana', 'Prometheus', ],
     githubUrl: 'https://github.com/tukue/simpleApplication',
@@ -65,17 +118,20 @@ const projects = [
     demoUrl: '#'
   },
   {
-    title: 'Microservices-based APIs',
-    description: 'Designed and implemented a comprehensive enterprise-grade microservices platform using Spring Boot and cloud technologies.',
-    details: [
-      'Scalable microservices architecture using Spring Boot and Spring Cloud',
-      'Service orchestration and container management with Kubernetes',
-      'Message-driven architecture using RabbitMQ for service integration',
-      'API Gateway implementation with Spring Cloud Gateway'
-    ],
-    tags: ['Spring Boot', 'Kubernetes', 'RabbitMQ', 'Docker', 'AWS'],
-    githubUrl: 'https://github.com/tukue/ecommerce-api',
-    demoUrl: '#'
+  "title": "Node.js REST API with Express, Sequelize & PostgreSQL",
+  "description": "Developed a robust RESTful API using Node.js, Express, Sequelize ORM, and PostgreSQL. Features include JWT-based user authentication, product and order management with full CRUD operations, and comprehensive Swagger API documentation.",
+  "details": [
+    "Implemented secure user authentication using JSON Web Tokens (JWT)",
+    "Designed and built CRUD endpoints for product and order management",
+    "Used Sequelize ORM for efficient database modeling and queries",
+    "Documented API endpoints and usage with Swagger for easy integration",
+    "Structured code for scalability and maintainability following best practices"
+  ],
+  "tags": [
+    "Node.js", "Express", "Sequelize", "PostgreSQL", "JWT", "REST API", "Swagger", "Backend"
+  ],
+  "githubUrl": "https://github.com/tukue/ecommerce-api",
+  "demoUrl": "#"
   },
   {
     title: 'Containerized Node.js Application on EKS',
