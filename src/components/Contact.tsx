@@ -13,27 +13,24 @@ import {
   EMAILJS_PUBLIC_KEY,
   EMAILJS_DESTINATION_EMAIL 
 } from '@/lib/emailjs';
+import { EmailJSService } from '@/lib/EmailJSService';
 
 const Contact = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   
+  const emailService = new EmailJSService();
+
   const onSubmit = (data: any) => {
     setIsSubmitting(true);
-    
-    emailjs.send(
-      EMAILJS_SERVICE_ID,
-      EMAILJS_TEMPLATE_ID,
-      {
-        from_name: data.name,
-        from_email: data.email,
-        to_email: EMAILJS_DESTINATION_EMAIL,
-        subject: data.subject,
-        message: data.message
-      },
-      EMAILJS_PUBLIC_KEY
-    )
+    emailService.sendEmail({
+      from_name: data.name,
+      from_email: data.email,
+      to_email: EMAILJS_DESTINATION_EMAIL,
+      subject: data.subject,
+      message: data.message
+    })
     .then(() => {
       toast({
         title: "Message sent!",
