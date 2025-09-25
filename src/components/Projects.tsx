@@ -159,6 +159,20 @@ const projects = [
     githubUrl: 'https://github.com/tukue/simple_api',
     demoUrl: '#'
   },
+  {
+    title: 'Automated EKS Deployment for Spring Boot Microservices with Terraform & GitHub Actions',
+    description: 'Provisioned infrastructure with Terraform and deployed a containerized application to AWS using a CI/CD pipeline with GitHub Actions.',
+    details: [
+      'Infrastructure provisioned on AWS using Terraform.',
+      'CI/CD pipeline built with GitHub Actions for automated builds and testing.',
+      'Deployment to Amazon EKS managed by the AWS CI/CD pipeline.',
+      'Container images stored in Amazon ECR.',
+      'Monitoring and logging implemented with AWS CloudWatch.'
+    ],
+    tags: ['Terraform', 'AWS', 'GitHub Actions', 'CI/CD', 'EKS', 'Docker', 'DevOps'],
+    githubUrl: 'https://github.com/tukue/grocery-microservices',
+    demoUrl: '#'
+  }
 ];
 
 const Projects = () => {
@@ -189,7 +203,7 @@ const Projects = () => {
                       <Github className="h-5 w-5" />
                     </span>
                   )}
-                  {project.demoUrl && project.demoUrl !== '#' && (
+                  {project.demoUrl && project.demoUrl !== '#'&& (
                     <a 
                       href={project.demoUrl}
                       target="_blank" 
