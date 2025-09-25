@@ -5,22 +5,7 @@ import { ArrowUpRight, Github, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const projects = [
-  {
-    title: 'AWS Event-Driven Application Development',
-    description: 'Developed event-driven architecture using AWS services with focus on scalability, reliability and security best practices.',
-    details: [
-      'Implementing ECS restarting logic using Lambda function',
-      'AWS Event bus for integrating communication between lambdas',
-      'Step Functions for orchestrating complex workflows',
-      'X-Ray for distributed tracing and debugging',
-      'CloudFormation for infrastructure as code',
-      'Security Hub for security findings and compliance'
-    ],
-    tags: ['AWS', 'CloudFormation', 'Lambda', 'Step Functions', 'X-Ray', 'Security Hub'],
-    githubUrl: 'company URL',
-    demoUrl: '#',
-    featured: true
-  },
+
   {
     title: 'Cloud Infrastructure Automation',
     description: 'Developed infrastructure as code solutions using Terraform, implementing AWS services and Kubernetes orchestration with security best practices.',
@@ -96,7 +81,7 @@ const projects = [
   "demoUrl": "#"
 },
   {
-    title: 'Implmenting Monitoring Solution',
+    title: 'Implementing DevOps Monitoring Solution',
     description: 'Implemented comprehensive monitoring solutions using Grafana, Prometheus, and the ELK Stack for kubernets infrastructure visibility.',
     details: [],
     tags: ['Grafana', 'Prometheus', ],
@@ -172,7 +157,35 @@ const projects = [
     tags: ['Terraform', 'AWS', 'GitHub Actions', 'CI/CD', 'EKS', 'Docker', 'DevOps'],
     githubUrl: 'https://github.com/tukue/grocery-microservices',
     demoUrl: '#'
+  },
+{
+    title: 'Automated Infrastructure provisioning for scalable web app on GCP ',
+    description: 'Provisioned infrastructure with Terraform and deployed a containerized application to AWS using a CI/CD pipeline with GitHub Actions.',
+    details: [
+      'Infrastructure provisioned on GCP using Terraform.',
+      'CI/CD pipeline built with GitHub Actions for automated builds and testing.',
+      'Terraform security configuration scan using Terrascan '
+    ],
+    tags: ['Terraform', 'GCP', 'GitHub Actions', 'CI/CD', 'Terraform security scanning', 'DevOps'],
+    githubUrl: 'https://github.com/tukue/terraform-automation',
+    demoUrl: '#'
+  },
+{
+    title: 'AWS Event-Driven Application Development',
+    description: 'Developed event-driven architecture using AWS services with focus on scalability, reliability and security best practices.',
+    details: [
+      'Implementing ECS restarting logic using Lambda function',
+      'AWS Event bus for integrating communication between lambdas',
+      'Step Functions for orchestrating complex workflows',
+      'X-Ray for distributed tracing and debugging',
+      'CloudFormation for infrastructure as code',
+      'Security Hub for security findings and compliance'
+    ],
+    tags: ['AWS', 'CloudFormation', 'Lambda', 'Step Functions', 'X-Ray', 'Security Hub'],
+    demoUrl: '#',
+    featured: true
   }
+
 ];
 
 const Projects = () => {
