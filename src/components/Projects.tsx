@@ -24,7 +24,6 @@ const projects = [
       'Automated deployments through Amplify Console'
     ],
     tags: ['React', 'AWS Amplify', 'Lambda', 'API Gateway', 'DynamoDB'],
-    githubUrl: 'https://github.com/tukue/reactcon',
     demoUrl: '#'
   },
     {
