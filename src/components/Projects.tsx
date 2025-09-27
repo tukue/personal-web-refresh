@@ -183,7 +183,20 @@ const projects = [
     tags: ['AWS', 'CloudFormation', 'Lambda', 'Step Functions', 'X-Ray', 'Security Hub'],
     demoUrl: '#',
     featured: true
-  }
+  },{
+
+      title: ' Fullstack ecommerce application with React typescript ',
+     description: 'modern, responsive e-commerce platform designed to provide a seamless shopping experience. Built with React, TypeScript',
+     details: [
+          'Built with React, TypeScript and Backend integarted with supabase',
+          ' CI/CD pipeline setup with github action',
+           ' dynamic product catalog, shopping cart functionality, and secure payment integration'
+           ],
+           tags: ['Fullstack development', 'React', 'TypeScript', 'Backend integration with supabase',' DevOps'],
+            demoUrl: '#',
+            githubUrl: 'https://github.com/tukue/shopease-ecomerce',
+               featured: true
+               },
 
 ];
 
