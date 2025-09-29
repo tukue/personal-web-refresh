@@ -131,7 +131,7 @@ const projects = [
     demoUrl: '#'
   },
   {
-    title: 'Python Development Portfolio',
+    title: 'Python for backend  Development and data science ',
     description: 'Developed multiple Python projects demonstrating proficiency in REST APIs, game development, test automation, and data analysis.',
     details: [
       'RESTful API Development with Flask framework and SQLAlchemy',
