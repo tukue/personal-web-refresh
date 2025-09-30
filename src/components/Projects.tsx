@@ -97,7 +97,7 @@ const projects = [
       'Responsive UI with AWS Amplify UI components',
       'Automated CI/CD pipeline for continuous deployment'
     ],
-    tags: ['React', 'AWS Amplify', 'GraphQL', 'Cognito', 'DynamoDB'],
+    tags: ['React', 'AWS Amplify', 'GraphQL', 'Cognito', 'DynamoDB', 'Fullstack Development', 'DevOps'],
     githubUrl: 'https://github.com/tukue/todo',
     demoUrl: '#'
   },
@@ -196,7 +196,15 @@ const projects = [
             demoUrl: '#',
             githubUrl: 'https://github.com/tukue/shopease-ecomerce',
                featured: true
-               },
+               },   { title : 'Developed Fullstack book recommender web application',
+                       description : 'A Book recommender App is a web-based application that recommends self improvement and growth books',
+                       details : [
+                           ' Built wit nodejs javascript ', ' Backend Integrated with supabase', 'Integration with open Library API for cover pages', ' Integrated with spotify to listen audio books ', ' CI/CD pipeline setup with github action  '
+                           ],
+                           tags:[' Fullstack development', 'Nodejs Backend development', 'DevOps', 'CI/CD', ' github action',' DevSecOps ' ] ,
+                           demourl: '#',
+                           featured: true
+                }
 
 ];
 
