@@ -114,7 +114,7 @@ const projects = [
   {
     title: 'Fullstack React AWS Amplify Application',
     description: 'Developed a modern fullstack web application using React and AWS cloud services through Amplify with secure authentication and real-time data.',
-    details": [
+    details: [
       'Secure user authentication and authorization using Amazon Cognito',
       'Real-time data synchronization with GraphQL API and AppSync',
       'Serverless backend with DynamoDB for data persistence',
@@ -209,7 +209,7 @@ const projects = [
     featured: true
   },{
 
-      title: ' Fullstack ecommerce application with React typescript ',
+      title: 'Fullstack ecommerce application with React typescript',
      description: 'modern, responsive e-commerce platform designed to provide a seamless shopping experience. Built with React, TypeScript',
      details: [
           'Built with React, TypeScript and Backend integarted with supabase',
