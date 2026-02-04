@@ -5,7 +5,31 @@ import { ArrowUpRight, Github, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const projects = [
-
+  {
+    title: 'AWS FinOps Container Optimization for AI Workloads',
+    description: 'Reference implementation of FinOps best practices for optimizing ECS/EKS-based AI workloads on AWS. Achieve cost optimization through spot instances, autoscaling, and intelligent resource management.',
+    details: [
+      'Spot instance strategies for AI training/inference',
+      'Cost visibility and optimization'
+    ],
+    tags: ['AWS', 'FinOps', 'ECS', 'EKS', 'AI', 'Cost Optimization'],
+    githubUrl: 'https://github.com/tukue/aws-finops-container-optimization',
+    demoUrl: '#',
+    featured: true
+  },
+  {
+    title: 'MLOps CI/CD Pipeline',
+    description: 'A complete MLOps pipeline demonstrating machine learning model training, deployment, and continuous integration/continuous deployment practices using FastAPI, scikit-learn, and automated workflows.',
+    details: [
+      'Machine learning model training with scikit-learn',
+      'Model deployment with FastAPI',
+      'CI/CD pipeline for automated workflows'
+    ],
+    tags: ['MLOps', 'CI/CD', 'FastAPI', 'scikit-learn', 'Docker'],
+    githubUrl: 'https://github.com/tukue/mlops-model-ci-cd',
+    demoUrl: '#',
+    featured: true
+  },
   {
     title: 'Cloud Infrastructure Automation',
     description: 'Developed infrastructure as code solutions using Terraform, implementing AWS services and Kubernetes orchestration with security best practices.',
@@ -90,7 +114,7 @@ const projects = [
   {
     title: 'Fullstack React AWS Amplify Application',
     description: 'Developed a modern fullstack web application using React and AWS cloud services through Amplify with secure authentication and real-time data.',
-    details: [
+    details": [
       'Secure user authentication and authorization using Amazon Cognito',
       'Real-time data synchronization with GraphQL API and AppSync',
       'Serverless backend with DynamoDB for data persistence',
@@ -199,7 +223,7 @@ const projects = [
                },   { title : 'Developed Fullstack book recommender web application',
                        description : 'A Book recommender App is a web-based application that recommends self improvement and growth books',
                        details : [
-                           ' Built wit nodejs javascript ', ' Backend Integrated with supabase', 'Integration with open Library API for cover pages', ' Integrated with spotify to listen audio books ', ' CI/CD pipeline setup with github action  '
+                           ' Built wit nodejs javascript ', ' Backend Integrated with supabase', 'Integration with open Library API for cover pages', ' Integrated with spotify to listen to audio books ', ' CI/CD pipeline setup with github action  '
                            ],
                            tags:[' Fullstack development', 'Nodejs Backend development', 'DevOps', 'CI/CD', ' github action',' DevSecOps ' ] ,
                            demourl: '#',
