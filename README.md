@@ -8,6 +8,12 @@ A modern, responsive portfolio website for Tukue Gebremariam, a DevOps Engineer 
 
 This project showcases my professional experience, projects, skills, and contact information in a clean, modern interface. The site is built with React, TypeScript, and Tailwind CSS using the shadcn/ui component library.
 
+## SEO Highlights
+
+- Updated page title and meta description to align with primary keywords (Senior DevOps Engineer, Backend Developer).
+- Added canonical and robots meta tags, plus Open Graph and Twitter tags for improved social sharing.
+- Optimized the hero H1 to include role-focused keywords for stronger on-page relevance.
+
 ## Technologies Used
 
 - **React 18** with TypeScript

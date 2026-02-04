@@ -13,7 +13,7 @@ const Hero = () => {
           <AvatarFallback>TG</AvatarFallback>
         </Avatar>
         <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
-          Tukue Gebremariam Gebregergis, MSc
+          Tukue Gebremariam Gebregergis, MSc — Senior DevOps Engineer & Backend Developer
         </h1>
         <p className="text-lg md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           Senior DevOps Engineer & Backend Developer
