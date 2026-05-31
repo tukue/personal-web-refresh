@@ -34,6 +34,12 @@ The site is a single-page application (SPA) with the following structure:
 | **Linting** | ESLint (flat config) |
 | **Hosting** | Netlify |
 
+## Featured Projects
+
+### AWS FinOps & Container Optimization
+
+Repository: [aws-finops-container-optimization](https://github.com/tukue/aws-finops-container-optimization)
+
 ## Development
 
 ```sh
