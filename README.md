@@ -2,16 +2,37 @@
 
 [![Node.js CI](https://github.com/tukue/personal-web-refresh/actions/workflows/ci.yml/badge.svg)](https://github.com/tukue/personal-web-refresh/actions/workflows/ci.yml)
 
-Personal portfolio built with React, TypeScript, and Tailwind CSS.  
+A modern, responsive portfolio website for Tukue Gebremariam, a DevOps Engineer and Backend Developer. This project showcases my professional experience, projects, skills, and contact information in a clean, modern interface built with React, TypeScript, and Tailwind CSS using the shadcn/ui component library.
+
 Live at **[tukue-portofilo.netlify.app](https://tukue-portofilo.netlify.app/)**.
 
-## Stack
+## System Architecture
 
-- **React 18** + TypeScript
-- **Vite** (build tool)
-- **Tailwind CSS** + **shadcn/ui**
-- **EmailJS** (contact form)
-- **Netlify** (hosting)
+The site is a single-page application (SPA) with the following structure:
+
+- **Routing** — React Router v6 handles client-side navigation with an index route and a catch-all 404 page.
+- **Components** — Organized into three layers:
+  - `pages/` — top-level route pages (`Index`, `NotFound`)
+  - `components/sections/` — feature-specific sections used by pages (`AboutSection`, `ResumeSection`)
+  - `components/ui/` — reusable primitives from shadcn/ui (button, card, dialog, etc.)
+- **State & Data** — TanStack React Query for server state, React hooks for local state. EmailJS service is abstracted behind an interface (`IEmailService`) for testability.
+- **Styling** — Tailwind CSS utility classes with CSS variables for theming (dark mode via class toggle).
+- **Build & Deploy** — Vite bundles the app; Netlify serves it with SPA redirect rules (`/* → /index.html`).
+
+## Tech Stack
+
+| Category | Technology |
+|---|---|
+| **Framework** | React 18 with TypeScript |
+| **Build Tool** | Vite 5 (SWC plugin) |
+| **Styling** | Tailwind CSS, shadcn/ui, PostCSS |
+| **Routing** | React Router v6 |
+| **State Management** | TanStack React Query |
+| **Forms** | react-hook-form + Zod |
+| **Email** | EmailJS (contact form) |
+| **Testing** | Vitest, Testing Library, jsdom |
+| **Linting** | ESLint (flat config) |
+| **Hosting** | Netlify |
 
 ## Development
 
@@ -22,11 +43,21 @@ npm install
 npm run dev
 ```
 
-## Deployment
+## Deployment with Netlify
 
-Pushed to `main` → auto-deployed by Netlify.
+This site is deployed using Netlify for continuous deployment.
 
-### Environment Variables (Netlify)
+### Deployment Steps
+
+1. **Connect your repository to Netlify**:
+   - Create a Netlify account at [netlify.com](https://www.netlify.com/)
+   - Click "New site from Git" and select your repository
+   - Configure the build settings:
+     - Build command: `npm run build`
+     - Publish directory: `dist`
+
+2. **Configure environment variables**:
+   - For contact form functionality, add these environment variables in Netlify:
 
 | Variable | Purpose |
 |---|---|
@@ -34,6 +65,37 @@ Pushed to `main` → auto-deployed by Netlify.
 | `VITE_EMAILJS_TEMPLATE_ID` | EmailJS template ID |
 | `VITE_EMAILJS_PUBLIC_KEY` | EmailJS public key |
 | `VITE_EMAILJS_DESTINATION_EMAIL` | Recipient email |
+
+3. **Deploy the site**:
+   - Netlify will automatically build and deploy your site
+   - Each push to the main branch will trigger a new deployment
+
+### Using Netlify CLI
+
+You can also deploy using the Netlify CLI:
+
+```sh
+# Install Netlify CLI
+npm install -g netlify-cli
+
+# Login to your Netlify account
+netlify login
+
+# Initialize Netlify in your project
+netlify init
+
+# Deploy to production
+netlify deploy --prod
+```
+
+### Custom Domain Setup
+
+To connect a custom domain:
+
+1. Go to your site settings in Netlify
+2. Navigate to "Domain management" > "Domains"
+3. Click "Add custom domain"
+4. Follow the instructions to configure your DNS settings
 
 ## Scripts
 
