@@ -12,7 +12,7 @@ const Hero = () => {
           <AvatarImage src="/profile-photo.jpg" alt="Tukue" />
           <AvatarFallback>TG</AvatarFallback>
         </Avatar>
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 text-foreground">
           Tukue Gebremariam Gebregergis, MSc — Senior DevOps Engineer & Backend Developer
         </h1>
         <p className="text-lg md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
