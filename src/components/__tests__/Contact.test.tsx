@@ -30,7 +30,7 @@ describe('Contact Component', () => {
     render(<Contact />);
     
     expect(screen.getByText('Get In Touch')).toBeInTheDocument();
-    expect(screen.getByText('Contact Information')).toBeInTheDocument();
+    expect(screen.getByText('Connect with me')).toBeInTheDocument();
     expect(screen.getByText('Send Me a Message')).toBeInTheDocument();
     expect(screen.getByText('Send Message')).toBeInTheDocument();
   });
