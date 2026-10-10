@@ -139,7 +139,7 @@ const Contact = () => {
                   <Label htmlFor="name" className="text-sm font-medium text-foreground">Full Name</Label>
                   <Input 
                     id="name"
-                    placeholder="John Doe" 
+                    placeholder="Your full name" 
                     {...register("name", { required: "Name is required" })}
                     className={errors.name ? "border-destructive ring-destructive/20" : "bg-background"}
                   />
@@ -151,7 +151,7 @@ const Contact = () => {
                   <Input 
                     id="email"
                     type="email" 
-                    placeholder="john@example.com" 
+                    placeholder="you@example.com" 
                     {...register("email", { 
                       required: "Email is required",
                       pattern: {
