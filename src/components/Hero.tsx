@@ -2,14 +2,13 @@
 import React from 'react';
 import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 const Hero = () => {
   return (
     <section id="home" className="flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] text-center py-20">
       <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
         <Avatar className="h-32 w-32 mx-auto mb-6">
-          <AvatarImage src="/profile-photo.jpg" alt="Tukue" />
           <AvatarFallback>TG</AvatarFallback>
         </Avatar>
         <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">

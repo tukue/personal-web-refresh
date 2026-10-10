@@ -25,8 +25,13 @@ const About = () => {
                 src="/profile.jpg" 
                 alt="Tukue Gebremariam" 
                 className="object-cover w-full h-full"
+                loading="lazy"
+                decoding="async"
                 onError={(e) => {
-                  e.currentTarget.src = "/placeholder.svg";
+                  // profile.jpg is not in public/ — hide instead of
+                  // requesting a missing placeholder (avoids SPA fallback
+                  // returning index.html with 200 for an image).
+                  e.currentTarget.style.display = "none";
                 }}
               />
             </div>
