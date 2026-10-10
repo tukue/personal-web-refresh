@@ -21,10 +21,10 @@ describe('Contact Form Integration', () => {
 
   it('submits the form and checks for 200 OK response', async () => {
     render(<Contact />);
-    fireEvent.change(screen.getByPlaceholderText('Your Name'), { target: { value: 'Test User' } });
-    fireEvent.change(screen.getByPlaceholderText('Your Email'), { target: { value: 'test@example.com' } });
-    fireEvent.change(screen.getByPlaceholderText('Subject'), { target: { value: 'Test Subject' } });
-    fireEvent.change(screen.getByPlaceholderText('Your Message'), { target: { value: 'Hello there!' } });
+    fireEvent.change(screen.getByPlaceholderText('John Doe'), { target: { value: 'Test User' } });
+    fireEvent.change(screen.getByPlaceholderText('john@example.com'), { target: { value: 'test@example.com' } });
+    fireEvent.change(screen.getByPlaceholderText('What is this regarding?'), { target: { value: 'Test Subject' } });
+    fireEvent.change(screen.getByPlaceholderText(/Tell me about your project/i), { target: { value: 'Hello there!' } });
     fireEvent.click(screen.getByRole('button', { name: /send message/i }));
 
     await waitFor(() => {

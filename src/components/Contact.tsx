@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Label } from '@/components/ui/label';
 import { Github, Linkedin, Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -63,7 +63,6 @@ const Contact = () => {
             <CardContent className="p-8">
               <div className="flex flex-col items-center md:items-start text-center md:text-left mb-6">
                 <Avatar className="h-20 w-20 mb-4 ring-2 ring-primary/30 ring-offset-2 ring-offset-background">
-                  <AvatarImage src="/profile-photo.jpg" alt="Tukue Gebremariam Gebregergis" />
                   <AvatarFallback className="text-lg bg-primary/10 text-primary">TG</AvatarFallback>
                 </Avatar>
                 <h3 className="text-xl font-bold text-foreground">Tukue Gebremariam Gebregergis, MSc</h3>
