@@ -14,7 +14,7 @@ const Hero = () => {
         <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-3 text-foreground">
           Tukue Gebremariam Gebregergis, MSc
         </h1>
-        <p className="text-xl md:text-2xl text-primary font-semibold mb-8 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-muted-foreground font-semibold mb-8 max-w-2xl mx-auto">
           Senior DevOps Engineer & Backend Developer
         </p>
         <p className="text-md md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
