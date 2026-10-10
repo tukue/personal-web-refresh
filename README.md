@@ -1,60 +1,51 @@
-# Portfolio Website
+# Tukue Gebremariam — Portfolio
 
 [![Node.js CI](https://github.com/tukue/personal-web-refresh/actions/workflows/ci.yml/badge.svg)](https://github.com/tukue/personal-web-refresh/actions/workflows/ci.yml)
 
-A modern, responsive portfolio website for Tukue Gebremariam, a DevOps Engineer and Backend Developer.
+A modern, responsive portfolio website for Tukue Gebremariam, a DevOps Engineer and Backend Developer. This project showcases my professional experience, projects, skills, and contact information in a clean, modern interface built with React, TypeScript, and Tailwind CSS using the shadcn/ui component library.
 
-## Project Overview
+Live at **[tukue-portofilo.netlify.app](https://tukue-portofilo.netlify.app/)**.
 
-This project showcases my professional experience, projects, skills, and contact information in a clean, modern interface. The site is built with React, TypeScript, and Tailwind CSS using the shadcn/ui component library.
+## System Architecture
 
-## SEO Highlights
+The site is a single-page application (SPA) with the following structure:
 
-- Updated page title and meta description to align with primary keywords (Senior DevOps Engineer, Backend Developer).
-- Added canonical and robots meta tags, plus Open Graph and Twitter tags for improved social sharing.
-- Optimized the hero H1 to include role-focused keywords for stronger on-page relevance.
+- **Routing** — React Router v6 handles client-side navigation with an index route and a catch-all 404 page.
+- **Components** — Organized into three layers:
+  - `pages/` — top-level route pages (`Index`, `NotFound`)
+  - `components/sections/` — feature-specific sections used by pages (`AboutSection`, `ResumeSection`)
+  - `components/ui/` — reusable primitives from shadcn/ui (button, card, dialog, etc.)
+- **State & Data** — TanStack React Query for server state, React hooks for local state. EmailJS service is abstracted behind an interface (`IEmailService`) for testability.
+- **Styling** — Tailwind CSS utility classes with CSS variables for theming (dark mode via class toggle).
+- **Build & Deploy** — Vite bundles the app; Netlify serves it with SPA redirect rules (`/* → /index.html`).
 
-## Technologies Used
+## Tech Stack
 
-- **React 18** with TypeScript
-- **Vite** for fast development and optimized builds
-- **Tailwind CSS** for styling
-- **shadcn/ui** components for consistent UI
-- **EmailJS** for contact form functionality
-- **Netlify** for deployment
+| Category | Technology |
+|---|---|
+| **Framework** | React 18 with TypeScript |
+| **Build Tool** | Vite 5 (SWC plugin) |
+| **Styling** | Tailwind CSS, shadcn/ui, PostCSS |
+| **Routing** | React Router v6 |
+| **State Management** | TanStack React Query |
+| **Forms** | react-hook-form + Zod |
+| **Email** | EmailJS (contact form) |
+| **Testing** | Vitest, Testing Library, jsdom |
+| **Linting** | ESLint (flat config) |
+| **Hosting** | Netlify |
 
 ## Featured Projects
 
-The portfolio highlights several projects, including:
+### AWS FinOps & Container Optimization
 
-### DevOps Infrastructure Automation on AWS with Terraform, Ansible, and GitOps Tools
-
-This repository contains Terraform configurations to automate the deployment of a Jenkins server on AWS. It provisions infrastructure such as VPC, EC2 instances, S3 backend for state management, and Route 53 for domain configuration.
-
-**Key Features:**
-- Automated Jenkins setup and software provisioning with Ansible playbooks
-- Infrastructure as Code using Terraform and Terragrunt
-- Security scanning with Terrascan
-- Remote state management with S3 backend and DynamoDB locking
-- CI/CD pipeline integration
-
-Visit the repository: [terraform-jenkins-aws](https://github.com/tukue/terraform-jenkins-aws)
+Repository: [aws-finops-container-optimization](https://github.com/tukue/aws-finops-container-optimization)
 
 ## Development
 
-To run this project locally:
-
 ```sh
-# Clone the repository
 git clone https://github.com/tukue/personal-web-refresh.git
-
-# Navigate to the project directory
 cd personal-web-refresh
-
-# Install dependencies
 npm install
-
-# Start the development server
 npm run dev
 ```
 
@@ -73,10 +64,13 @@ This site is deployed using Netlify for continuous deployment.
 
 2. **Configure environment variables**:
    - For contact form functionality, add these environment variables in Netlify:
-     - `VITE_EMAILJS_SERVICE_ID`
-     - `VITE_EMAILJS_TEMPLATE_ID`
-     - `VITE_EMAILJS_PUBLIC_KEY`
-     - `VITE_EMAILJS_DESTINATION_EMAIL`
+
+| Variable | Purpose |
+|---|---|
+| `VITE_EMAILJS_SERVICE_ID` | EmailJS service ID |
+| `VITE_EMAILJS_TEMPLATE_ID` | EmailJS template ID |
+| `VITE_EMAILJS_PUBLIC_KEY` | EmailJS public key |
+| `VITE_EMAILJS_DESTINATION_EMAIL` | Recipient email |
 
 3. **Deploy the site**:
    - Netlify will automatically build and deploy your site
@@ -108,3 +102,13 @@ To connect a custom domain:
 2. Navigate to "Domain management" > "Domains"
 3. Click "Add custom domain"
 4. Follow the instructions to configure your DNS settings
+
+## Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start dev server on port 8080 |
+| `npm run build` | Production build to `dist/` |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Lint with ESLint |
+| `npm test` | Run tests with Vitest |
