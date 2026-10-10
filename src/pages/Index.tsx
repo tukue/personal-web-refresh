@@ -1,5 +1,5 @@
 
-import { lazy, Suspense } from 'react';
+import { Component, lazy, Suspense, type ReactNode } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
@@ -18,6 +18,31 @@ const SectionFallback = () => (
   </div>
 );
 
+// Isolates chunk-load/render failures to a single section so one
+// failing lazy import can't block or crash the rest of the page.
+class SectionErrorBoundary extends Component<{ children: ReactNode }> {
+  state = { hasError: false };
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: unknown) {
+    console.error('Failed to load page section:', error);
+  }
+
+  render() {
+    if (this.state.hasError) return null;
+    return this.props.children;
+  }
+}
+
+const LazySection = ({ children }: { children: ReactNode }) => (
+  <SectionErrorBoundary>
+    <Suspense fallback={<SectionFallback />}>{children}</Suspense>
+  </SectionErrorBoundary>
+);
+
 const Index = () => {
   return (
     <div className="flex flex-col min-h-screen bg-background font-sans antialiased">
@@ -25,13 +50,21 @@ const Index = () => {
       <main className="flex-grow">
         <div className="container mx-auto px-4 md:px-8">
           <Hero />
-          <Suspense fallback={<SectionFallback />}>
+          <LazySection>
             <Resume />
+          </LazySection>
+          <LazySection>
             <Education />
+          </LazySection>
+          <LazySection>
             <Projects />
+          </LazySection>
+          <LazySection>
             <About />
+          </LazySection>
+          <LazySection>
             <Contact />
-          </Suspense>
+          </LazySection>
         </div>
       </main>
       <Footer />
