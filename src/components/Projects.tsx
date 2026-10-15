@@ -1,10 +1,68 @@
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowUpRight, Github, ExternalLink } from 'lucide-react';
+import { ArrowUpRight, Github, ExternalLink, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  details?: string[];
+  tags: string[];
+  githubUrl?: string;
+  demoUrl?: string;
+  featured?: boolean;
+  private?: boolean;
+};
+
+const projects: Project[] = [
+  {
+    title: 'MetaFlow — Metabolic Health App',
+    description: 'Independent product build — a metabolic health companion that turns daily habits into guided coaching, progress tracking, and personalized wellbeing guidance.',
+    details: [
+      'Personalized coaching, habit tracking, and daily guidance for metabolic wellbeing',
+      'Type-safe frontend architected with Vite, React, and TypeScript',
+      'Modern component-driven UI using shadcn/ui and Tailwind CSS',
+      'CI/CD via GitHub Actions with preview and production deployments on Vercel',
+      'Private repository — live demo available'
+    ],
+    tags: ['Independent Project', 'React', 'TypeScript', 'Vite', 'shadcn/ui', 'Tailwind CSS', 'DevOps', 'Vercel'],
+    demoUrl: 'https://metabol-balance-app-pdur.vercel.app/',
+    featured: true,
+    private: true
+  },
+  {
+    title: 'Book Recommender App for Avid Readers',
+    description: 'Independent fullstack app that recommends self-improvement and growth books, with reading notes, curated cover art, and companion audiobooks.',
+    details: [
+      'Node.js and Express backend with Supabase (PostgreSQL) for books, notes, and users',
+      'Personalized self-improvement and growth-book recommendations for avid readers',
+      'Open Library API integration for book cover art',
+      'Spotify integration to listen to companion audiobooks',
+      'Jest + Supertest API tests, GitHub Actions CI/CD, deployed on Render',
+      'Private repository — live demo available'
+    ],
+    tags: ['Independent Project', 'Node.js', 'Express', 'Supabase', 'React', 'Jest', 'GitHub Actions', 'Render'],
+    demoUrl: 'https://book-notes-app-tfwv.onrender.com',
+    featured: true,
+    private: true
+  },
+  {
+    title: 'FitShop — Multi-Tenant SaaS E-Commerce Platform',
+    description: 'Independent SaaS platform where fitness-equipment merchants spin up isolated storefronts in minutes — catalog, cart, Stripe checkout, and subscription billing.',
+    details: [
+      'Next.js App Router with React Server Components and server-side data fetching',
+      'Neon serverless Postgres with row-level tenant isolation',
+      'NextAuth v5 sessions carrying tenant ID for scoped, secure access',
+      'Stripe Checkout and subscriptions with idempotent webhook handling',
+      '43 integration tests (Node test runner) plus Playwright e2e, deployed on Vercel',
+      'Private repository — live demo available'
+    ],
+    tags: ['Independent Project', 'Next.js', 'TypeScript', 'PostgreSQL', 'Stripe', 'NextAuth', 'Playwright', 'Vercel'],
+    demoUrl: 'https://ecommerce-app-ecru-nine.vercel.app/',
+    featured: true,
+    private: true
+  },
   {
     title: 'AWS FinOps Container Optimization for AI Workloads',
     description: 'Reference implementation of FinOps best practices for optimizing ECS/EKS-based AI workloads on AWS. Achieve cost optimization through spot instances, autoscaling, and intelligent resource management.',
@@ -50,64 +108,64 @@ const projects = [
     tags: ['React', 'AWS Amplify', 'Lambda', 'API Gateway', 'DynamoDB'],
     demoUrl: '#'
   },
-    {
-  "title": "DevOps Infrastructure Automation on AWS with Terraform, Ansible, and GitOps Tools",
-  "description": "Designed and automated a complete DevOps infrastructure on AWS using Terraform, Terragrunt, Ansible, and ArgoCD. Ensured infrastructure compliance, scalability, and maintainability through Infrastructure as Code and security tooling.",
-  "details": [
-    "Provisioned AWS infrastructure including VPC, EC2, S3, IAM, and Route 53 using Terraform and Terragrunt",
-    "Automated Jenkins setup and software provisioning with Ansible playbooks",
-    "Integrated Terrascan for static code analysis and compliance scanning of IaC",
-    "Used ArgoCD for GitOps-style Kubernetes deployment configuration (if applicable)",
-    "Managed remote state with S3 backend and DynamoDB locking for safe IaC workflows",
-    "Enabled end-to-end CI/CD pipelines using Jenkins and GitHub integrations"
-  ],
-  "tags": [
-    "AWS", "Terraform", "Terragrunt", "Ansible", "Terrascan", "ArgoCD", "Jenkins", 
-    "CI/CD", "Infrastructure as Code", "DevOps", "Automation", "Scripting", 
-    "Infrastructure Management"
-  ],
-  "githubUrl": "https://github.com/tukue/terraform-jenkins-aws",
-  "demoUrl": "#"
-},
-{
-  "title": "Azure DevOps Automation with Terraform, Terragrunt & ArgoCD",
-  "description": "Automated the provisioning and configuration of Azure infrastructure using Terraform, Terragrunt, and shell scripting. Enhanced DevSecOps practices with Terrascan and streamlined deployment pipelines with ArgoCD for GitOps-driven workflows.",
-  "details": [
-    "Provisioned scalable Azure infrastructure using Terraform and Terragrunt for modular, maintainable IaC",
-    "Automated infrastructure configuration and software deployment via shell scripts",
-    "Integrated Terrascan for continuous security and compliance scanning of infrastructure code",
-    "Implemented GitOps deployment workflows using ArgoCD for Kubernetes resources",
-    "Enabled DevOps tech enablement through pipeline automation and infrastructure standardization"
-  ],
-  "tags": [
-    "Azure", "Terraform", "Terragrunt", "Shell Scripting", "Terrascan",
-    "ArgoCD", "DevOps", "DevSecOps", "Infrastructure as Code", "Automation"
-  ],
-  "githubUrl": "https://github.com/tukue/simpleAppProvisionAzure",
-  "demoUrl": "#"
-},
-{
-  "title": "Three-Tier Azure Infrastructure with Bicep & PowerShell",
-  "description": "Implemented a modular, secure three-tier architecture on Azure using Bicep templates and PowerShell scripts. The design includes network segmentation, private connectivity, and application monitoring, with a Terraform-like deployment workflow.",
-  "details": [
-    "Designed modular Bicep templates for reusable and maintainable infrastructure code",
-    "Automated deployment using PowerShell scripts following init, plan, and apply phases",
-    "Implemented network segmentation for enhanced security and private connectivity",
-    "Configured application monitoring and logging to ensure operational insights",
-    "Adopted Infrastructure as Code best practices for Azure cloud environments"
-  ],
-  "tags": [
-    "Azure", "Bicep", "PowerShell", "Infrastructure as Code", "Network Segmentation",
-    "Private Connectivity", "Application Monitoring", "DevOps", "Automation"
-  ],
-  "githubUrl": "https://github.com/tukue/AzureInfrastuctureAsCode",
-  "demoUrl": "#"
-},
+  {
+    title: 'DevOps Infrastructure Automation on AWS with Terraform, Ansible, and GitOps Tools',
+    description: 'Designed and automated a complete DevOps infrastructure on AWS using Terraform, Terragrunt, Ansible, and ArgoCD. Ensured infrastructure compliance, scalability, and maintainability through Infrastructure as Code and security tooling.',
+    details: [
+      'Provisioned AWS infrastructure including VPC, EC2, S3, IAM, and Route 53 using Terraform and Terragrunt',
+      'Automated Jenkins setup and software provisioning with Ansible playbooks',
+      'Integrated Terrascan for static code analysis and compliance scanning of IaC',
+      'Used ArgoCD for GitOps-style Kubernetes deployment configuration',
+      'Managed remote state with S3 backend and DynamoDB locking for safe IaC workflows',
+      'Enabled end-to-end CI/CD pipelines using Jenkins and GitHub integrations'
+    ],
+    tags: [
+      'AWS', 'Terraform', 'Terragrunt', 'Ansible', 'Terrascan', 'ArgoCD', 'Jenkins',
+      'CI/CD', 'Infrastructure as Code', 'DevOps', 'Automation', 'Scripting',
+      'Infrastructure Management'
+    ],
+    githubUrl: 'https://github.com/tukue/terraform-jenkins-aws',
+    demoUrl: '#'
+  },
+  {
+    title: 'Azure DevOps Automation with Terraform, Terragrunt & ArgoCD',
+    description: 'Automated the provisioning and configuration of Azure infrastructure using Terraform, Terragrunt, and shell scripting. Enhanced DevSecOps practices with Terrascan and streamlined deployment pipelines with ArgoCD for GitOps-driven workflows.',
+    details: [
+      'Provisioned scalable Azure infrastructure using Terraform and Terragrunt for modular, maintainable IaC',
+      'Automated infrastructure configuration and software deployment via shell scripts',
+      'Integrated Terrascan for continuous security and compliance scanning of infrastructure code',
+      'Implemented GitOps deployment workflows using ArgoCD for Kubernetes resources',
+      'Enabled DevOps tech enablement through pipeline automation and infrastructure standardization'
+    ],
+    tags: [
+      'Azure', 'Terraform', 'Terragrunt', 'Shell Scripting', 'Terrascan',
+      'ArgoCD', 'DevOps', 'DevSecOps', 'Infrastructure as Code', 'Automation'
+    ],
+    githubUrl: 'https://github.com/tukue/simpleAppProvisionAzure',
+    demoUrl: '#'
+  },
+  {
+    title: 'Three-Tier Azure Infrastructure with Bicep & PowerShell',
+    description: 'Implemented a modular, secure three-tier architecture on Azure using Bicep templates and PowerShell scripts. The design includes network segmentation, private connectivity, and application monitoring, with a Terraform-like deployment workflow.',
+    details: [
+      'Designed modular Bicep templates for reusable and maintainable infrastructure code',
+      'Automated deployment using PowerShell scripts following init, plan, and apply phases',
+      'Implemented network segmentation for enhanced security and private connectivity',
+      'Configured application monitoring and logging to ensure operational insights',
+      'Adopted Infrastructure as Code best practices for Azure cloud environments'
+    ],
+    tags: [
+      'Azure', 'Bicep', 'PowerShell', 'Infrastructure as Code', 'Network Segmentation',
+      'Private Connectivity', 'Application Monitoring', 'DevOps', 'Automation'
+    ],
+    githubUrl: 'https://github.com/tukue/AzureInfrastuctureAsCode',
+    demoUrl: '#'
+  },
   {
     title: 'Implementing DevOps Monitoring Solution',
-    description: 'Implemented comprehensive monitoring solutions using Grafana, Prometheus, and the ELK Stack for kubernets infrastructure visibility.',
+    description: 'Implemented comprehensive monitoring solutions using Grafana, Prometheus, and the ELK Stack for Kubernetes infrastructure visibility.',
     details: [],
-    tags: ['Grafana', 'Prometheus', ],
+    tags: ['Grafana', 'Prometheus', 'ELK Stack', 'Kubernetes'],
     githubUrl: 'https://github.com/tukue/simpleApplication',
     demoUrl: '#'
   },
@@ -126,20 +184,20 @@ const projects = [
     demoUrl: '#'
   },
   {
-  "title": "Node.js REST API with Express, Sequelize & PostgreSQL",
-  "description": "Developed a robust RESTful API using Node.js, Express, Sequelize ORM, and PostgreSQL. Features include JWT-based user authentication, product and order management with full CRUD operations, and comprehensive Swagger API documentation.",
-  "details": [
-    "Implemented secure user authentication using JSON Web Tokens (JWT)",
-    "Designed and built CRUD endpoints for product and order management",
-    "Used Sequelize ORM for efficient database modeling and queries",
-    "Documented API endpoints and usage with Swagger for easy integration",
-    "Structured code for scalability and maintainability following best practices"
-  ],
-  "tags": [
-    "Node.js", "Express", "Sequelize", "PostgreSQL", "JWT", "REST API", "Swagger", "Backend"
-  ],
-  "githubUrl": "https://github.com/tukue/ecommerce-api",
-  "demoUrl": "#"
+    title: 'Node.js REST API with Express, Sequelize & PostgreSQL',
+    description: 'Developed a robust RESTful API using Node.js, Express, Sequelize ORM, and PostgreSQL. Features include JWT-based user authentication, product and order management with full CRUD operations, and comprehensive Swagger API documentation.',
+    details: [
+      'Implemented secure user authentication using JSON Web Tokens (JWT)',
+      'Designed and built CRUD endpoints for product and order management',
+      'Used Sequelize ORM for efficient database modeling and queries',
+      'Documented API endpoints and usage with Swagger for easy integration',
+      'Structured code for scalability and maintainability following best practices'
+    ],
+    tags: [
+      'Node.js', 'Express', 'Sequelize', 'PostgreSQL', 'JWT', 'REST API', 'Swagger', 'Backend'
+    ],
+    githubUrl: 'https://github.com/tukue/ecommerce-api',
+    demoUrl: '#'
   },
   {
     title: 'Containerized Node.js Application on EKS',
@@ -155,7 +213,7 @@ const projects = [
     demoUrl: '#'
   },
   {
-    title: 'Python for backend  Development and data science ',
+    title: 'Python for Backend Development and Data Science',
     description: 'Developed multiple Python projects demonstrating proficiency in REST APIs, game development, test automation, and data analysis.',
     details: [
       'RESTful API Development with Flask framework and SQLAlchemy',
@@ -181,19 +239,19 @@ const projects = [
     githubUrl: 'https://github.com/tukue/grocery-microservices',
     demoUrl: '#'
   },
-{
-    title: 'Automated Infrastructure provisioning for scalable web app on GCP ',
-    description: 'Provisioned infrastructure with Terraform and deployed a containerized application to AWS using a CI/CD pipeline with GitHub Actions.',
+  {
+    title: 'Automated Infrastructure provisioning for scalable web app on GCP',
+    description: 'Provisioned infrastructure on GCP with Terraform and automated deployments using a GitHub Actions CI/CD pipeline with IaC security scanning.',
     details: [
-      'Infrastructure provisioned on GCP using Terraform.',
-      'CI/CD pipeline built with GitHub Actions for automated builds and testing.',
-      'Terraform security configuration scan using Terrascan '
+      'Infrastructure provisioned on GCP using Terraform',
+      'CI/CD pipeline built with GitHub Actions for automated builds and testing',
+      'Terraform security configuration scan using Terrascan'
     ],
-    tags: ['Terraform', 'GCP', 'GitHub Actions', 'CI/CD', 'Terraform security scanning', 'DevOps'],
+    tags: ['Terraform', 'GCP', 'GitHub Actions', 'CI/CD', 'Security Scanning', 'DevOps'],
     githubUrl: 'https://github.com/tukue/terraform-automation',
     demoUrl: '#'
   },
-{
+  {
     title: 'AWS Event-Driven Application Development',
     description: 'Developed event-driven architecture using AWS services with focus on scalability, reliability and security best practices.',
     details: [
@@ -207,29 +265,20 @@ const projects = [
     tags: ['AWS', 'CloudFormation', 'Lambda', 'Step Functions', 'X-Ray', 'Security Hub'],
     demoUrl: '#',
     featured: true
-  },{
-
-      title: 'Fullstack ecommerce application with React typescript',
-     description: 'modern, responsive e-commerce platform designed to provide a seamless shopping experience. Built with React, TypeScript',
-     details: [
-          'Built with React, TypeScript and Backend integarted with supabase',
-          ' CI/CD pipeline setup with github action',
-           ' dynamic product catalog, shopping cart functionality, and secure payment integration'
-           ],
-           tags: ['Fullstack development', 'React', 'TypeScript', 'Backend integration with supabase',' DevOps'],
-            demoUrl: '#',
-            githubUrl: 'https://github.com/tukue/shopease-ecomerce',
-               featured: true
-               },   { title : 'Developed Fullstack book recommender web application',
-                       description : 'A Book recommender App is a web-based application that recommends self improvement and growth books',
-                       details : [
-                           ' Built wit nodejs javascript ', ' Backend Integrated with supabase', 'Integration with open Library API for cover pages', ' Integrated with spotify to listen to audio books ', ' CI/CD pipeline setup with github action  '
-                           ],
-                           tags:[' Fullstack development', 'Nodejs Backend development', 'DevOps', 'CI/CD', ' github action',' DevSecOps ' ] ,
-                           demourl: '#',
-                           featured: true
-                }
-
+  },
+  {
+    title: 'ShopEase E-commerce Application',
+    description: 'Modern, responsive e-commerce platform designed to provide a seamless shopping experience, built with React and TypeScript.',
+    details: [
+      'Built with React and TypeScript, with the backend integrated with Supabase',
+      'CI/CD pipeline setup with GitHub Actions',
+      'Dynamic product catalog, shopping cart functionality, and secure payment integration'
+    ],
+    tags: ['Fullstack Development', 'React', 'TypeScript', 'Supabase', 'DevOps'],
+    demoUrl: '#',
+    githubUrl: 'https://github.com/tukue/shopease-ecomerce',
+    featured: true
+  }
 ];
 
 const Projects = () => {
@@ -245,7 +294,15 @@ const Projects = () => {
                   {project.title}
                 </CardTitle>
                 <div className="flex space-x-2">
-                  {project.githubUrl ? (
+                  {project.private ? (
+                    <span
+                      className="text-muted-foreground/50"
+                      title="Private repository — code on request"
+                      aria-label={`Private repository for ${project.title}`}
+                    >
+                      <Lock className="h-5 w-5" />
+                    </span>
+                  ) : project.githubUrl ? (
                     <a 
                       href={project.githubUrl}
                       target="_blank" 
@@ -290,7 +347,20 @@ const Projects = () => {
                   <Badge key={tag} variant="secondary" className="font-normal text-xs">{tag}</Badge>
                 ))}
               </div>
-              {project.githubUrl && (
+              {project.demoUrl && project.demoUrl !== '#' && (
+                <Button size="sm" className="w-full mt-2" asChild>
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Live Demo
+                  </a>
+                </Button>
+              )}
+              {project.githubUrl && !project.private && (
                 <Button variant="outline" size="sm" className="w-full mt-2" asChild>
                   <a 
                     href={project.githubUrl} 

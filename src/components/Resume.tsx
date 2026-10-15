@@ -4,6 +4,15 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { FileText } from 'lucide-react';
 
+type WorkExperience = {
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+  bullets?: string[];
+  current?: boolean;
+};
+
 const Resume = () => {
   const certifications = [
     'System verification - ISTQB Certified Tester Foundation',
@@ -36,7 +45,21 @@ const Resume = () => {
     },
   ];
 
-  const workExperience = [
+  const workExperience: WorkExperience[] = [
+    {
+      title: 'Independent Projects — Backend & Platform Engineering',
+      company: 'Self-directed',
+      period: 'November 2024 – Present',
+      current: true,
+      description:
+        'Actively searching for senior Backend and Platform Engineering roles while shipping independent, production-grade projects.',
+      bullets: [
+        'Strengthening capabilities in Platform Engineering, cloud-native architectures, Kubernetes, GitOps, DevSecOps, and multicloud solutions across AWS, Azure, and GCP.',
+        'Designing and developing cloud-native full-stack applications using React, Spring Boot, Node.js, and Python.',
+        'Building Infrastructure as Code solutions using Terraform, CloudFormation, and Bicep.',
+        'Expanding knowledge of AI Engineering through hands-on implementation of MLOps, LLMOps, and Agentic AI concepts.',
+      ],
+    },
     {
       title: 'Senior Cloud Engineer',
       company: 'Enigio',
@@ -124,14 +147,32 @@ const Resume = () => {
         <h3 className="text-2xl font-bold mb-6">Work Experience</h3>
         <div className="space-y-8">
           {workExperience.map((job, index) => (
-            <Card key={index} className="p-6">
+            <Card key={index} className={`p-6 ${job.current ? 'border-primary/40' : ''}`}>
               <CardContent className="p-0">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-                  <h4 className="text-xl font-semibold">{job.title}</h4>
+                  <h4 className="text-xl font-semibold flex items-center gap-3">
+                    {job.title}
+                    {job.current && (
+                      <Badge className="bg-green-600/15 text-green-700 dark:text-green-400 border border-green-600/40 hover:bg-green-600/20">
+                        <span className="relative mr-1.5 flex h-2 w-2">
+                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
+                          <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                        </span>
+                        Open for work
+                      </Badge>
+                    )}
+                  </h4>
                   <span className="text-muted-foreground">{job.period}</span>
                 </div>
                 <p className="text-lg mb-2">{job.company}</p>
                 <p className="text-muted-foreground">{job.description}</p>
+                {job.bullets && job.bullets.length > 0 && (
+                  <ul className="list-disc pl-5 mt-3 space-y-1.5 text-sm text-muted-foreground">
+                    {job.bullets.map((bullet, bulletIndex) => (
+                      <li key={bulletIndex}>{bullet}</li>
+                    ))}
+                  </ul>
+                )}
               </CardContent>
             </Card>
           ))}

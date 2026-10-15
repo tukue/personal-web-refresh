@@ -7,6 +7,18 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 const Hero = () => {
   return (
     <section id="home" className="flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] text-center py-20">
+      <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+        <a
+          href="#contact"
+          className="inline-flex items-center gap-2 rounded-full border border-green-600/40 bg-green-600/10 px-4 py-2 text-sm font-medium text-green-700 dark:text-green-400 transition-colors hover:bg-green-600/20"
+        >
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+          </span>
+          Open for work — actively seeking Senior Backend &amp; Platform Engineering roles
+        </a>
+      </div>
       <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
         <Avatar className="h-32 w-32 mx-auto mb-6">
           <AvatarFallback>TG</AvatarFallback>
@@ -18,7 +30,7 @@ const Hero = () => {
           Senior DevOps Engineer & Backend Developer
         </p>
         <p className="text-md md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-          tukue.geb@gmail.com | +46 725838209
+          Stockholm, Sweden · Open to remote opportunities
         </p>
       </div>
       <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
