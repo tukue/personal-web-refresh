@@ -17,13 +17,25 @@ const Header = () => {
         <a href="#" className="text-lg font-bold tracking-tighter text-foreground">
           Tukue
         </a>
-        <nav className="hidden md:flex gap-6">
-          {navLinks.map((link) => (
-            <a key={link.title} href={link.href} className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
-              {link.title}
-            </a>
-          ))}
-        </nav>
+        <div className="flex items-center gap-6">
+          <nav className="hidden md:flex gap-6">
+            {navLinks.map((link) => (
+              <a key={link.title} href={link.href} className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
+                {link.title}
+              </a>
+            ))}
+          </nav>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-1.5 rounded-full border border-green-600/40 bg-green-600/10 px-3 py-1 text-xs font-medium text-green-700 transition-colors hover:bg-green-600/20 dark:text-green-400"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+            </span>
+            Open for work
+          </a>
+        </div>
       </div>
     </header>
   );

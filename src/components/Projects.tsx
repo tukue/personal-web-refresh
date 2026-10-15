@@ -1,10 +1,68 @@
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowUpRight, Github, ExternalLink } from 'lucide-react';
+import { ArrowUpRight, Github, ExternalLink, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  details?: string[];
+  tags: string[];
+  githubUrl?: string;
+  demoUrl?: string;
+  featured?: boolean;
+  private?: boolean;
+};
+
+const projects: Project[] = [
+  {
+    title: 'MetaFlow — Metabolic Health App',
+    description: 'Independent product build — a metabolic health companion that turns daily habits into guided coaching, progress tracking, and personalized wellbeing guidance.',
+    details: [
+      'Personalized coaching, habit tracking, and daily guidance for metabolic wellbeing',
+      'Type-safe frontend architected with Vite, React, and TypeScript',
+      'Modern component-driven UI using shadcn/ui and Tailwind CSS',
+      'CI/CD via GitHub Actions with preview and production deployments on Vercel',
+      'Private repository — live demo available'
+    ],
+    tags: ['Independent Project', 'React', 'TypeScript', 'Vite', 'shadcn/ui', 'Tailwind CSS', 'DevOps', 'Vercel'],
+    demoUrl: 'https://metabol-balance-app-pdur.vercel.app/',
+    featured: true,
+    private: true
+  },
+  {
+    title: 'Book Recommender App for Avid Readers',
+    description: 'Independent fullstack app that recommends self-improvement and growth books, with reading notes, curated cover art, and companion audiobooks.',
+    details: [
+      'Node.js and Express backend with Supabase (PostgreSQL) for books, notes, and users',
+      'Personalized self-improvement and growth-book recommendations for avid readers',
+      'Open Library API integration for book cover art',
+      'Spotify integration to listen to companion audiobooks',
+      'Jest + Supertest API tests, GitHub Actions CI/CD, deployed on Render',
+      'Private repository — live demo available'
+    ],
+    tags: ['Independent Project', 'Node.js', 'Express', 'Supabase', 'React', 'Jest', 'GitHub Actions', 'Render'],
+    demoUrl: 'https://book-notes-app-tfwv.onrender.com',
+    featured: true,
+    private: true
+  },
+  {
+    title: 'FitShop — Multi-Tenant SaaS E-Commerce Platform',
+    description: 'Independent SaaS platform where fitness-equipment merchants spin up isolated storefronts in minutes — catalog, cart, Stripe checkout, and subscription billing.',
+    details: [
+      'Next.js App Router with React Server Components and server-side data fetching',
+      'Neon serverless Postgres with row-level tenant isolation',
+      'NextAuth v5 sessions carrying tenant ID for scoped, secure access',
+      'Stripe Checkout and subscriptions with idempotent webhook handling',
+      '43 integration tests (Node test runner) plus Playwright e2e, deployed on Vercel',
+      'Private repository — live demo available'
+    ],
+    tags: ['Independent Project', 'Next.js', 'TypeScript', 'PostgreSQL', 'Stripe', 'NextAuth', 'Playwright', 'Vercel'],
+    demoUrl: 'https://ecommerce-app-ecru-nine.vercel.app/',
+    featured: true,
+    private: true
+  },
   {
     title: 'AWS FinOps Container Optimization for AI Workloads',
     description: 'Reference implementation of FinOps best practices for optimizing ECS/EKS-based AI workloads on AWS. Achieve cost optimization through spot instances, autoscaling, and intelligent resource management.',
@@ -220,15 +278,7 @@ const projects = [
             demoUrl: '#',
             githubUrl: 'https://github.com/tukue/shopease-ecomerce',
                featured: true
-               },   { title : 'Developed Fullstack book recommender web application',
-                       description : 'A Book recommender App is a web-based application that recommends self improvement and growth books',
-                       details : [
-                           ' Built wit nodejs javascript ', ' Backend Integrated with supabase', 'Integration with open Library API for cover pages', ' Integrated with spotify to listen to audio books ', ' CI/CD pipeline setup with github action  '
-                           ],
-                           tags:[' Fullstack development', 'Nodejs Backend development', 'DevOps', 'CI/CD', ' github action',' DevSecOps ' ] ,
-                           demourl: '#',
-                           featured: true
-                }
+               }
 
 ];
 
@@ -245,7 +295,15 @@ const Projects = () => {
                   {project.title}
                 </CardTitle>
                 <div className="flex space-x-2">
-                  {project.githubUrl ? (
+                  {project.private ? (
+                    <span
+                      className="text-muted-foreground/50"
+                      title="Private repository — code on request"
+                      aria-label={`Private repository for ${project.title}`}
+                    >
+                      <Lock className="h-5 w-5" />
+                    </span>
+                  ) : project.githubUrl ? (
                     <a 
                       href={project.githubUrl}
                       target="_blank" 
@@ -290,6 +348,19 @@ const Projects = () => {
                   <Badge key={tag} variant="secondary" className="font-normal text-xs">{tag}</Badge>
                 ))}
               </div>
+              {project.demoUrl && project.demoUrl !== '#' && (
+                <Button size="sm" className="w-full mt-2" asChild>
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Live Demo
+                  </a>
+                </Button>
+              )}
               {project.githubUrl && (
                 <Button variant="outline" size="sm" className="w-full mt-2" asChild>
                   <a 
