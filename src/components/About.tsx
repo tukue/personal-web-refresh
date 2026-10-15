@@ -1,4 +1,5 @@
 import React from 'react';
+import profilePhoto from '@/assets/profile-photo.jpg';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Github, Linkedin, Mail, MapPin, Globe } from 'lucide-react';
@@ -22,17 +23,11 @@ const About = () => {
           <div className="md:col-span-2 flex flex-col items-center md:items-start space-y-6">
             <div className="relative w-64 h-64 rounded-xl overflow-hidden border-4 border-primary/20 shadow-xl">
               <img 
-                src="/profile.jpg" 
+                src={profilePhoto}
                 alt="Tukue Gebremariam" 
                 className="object-cover w-full h-full"
                 loading="lazy"
                 decoding="async"
-                onError={(e) => {
-                  // profile.jpg is not in public/ — hide instead of
-                  // requesting a missing placeholder (avoids SPA fallback
-                  // returning index.html with 200 for an image).
-                  e.currentTarget.style.display = "none";
-                }}
               />
             </div>
             
