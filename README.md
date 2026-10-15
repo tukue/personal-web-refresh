@@ -1,7 +1,5 @@
 # Tukue Gebremariam — Portfolio
 
-[![Node.js CI](https://github.com/tukue/personal-web-refresh/actions/workflows/ci.yml/badge.svg)](https://github.com/tukue/personal-web-refresh/actions/workflows/ci.yml)
-
 A modern, responsive portfolio website for Tukue Gebremariam, a DevOps Engineer and Backend Developer. This project showcases my professional experience, projects, skills, and contact information in a clean, modern interface built with React, TypeScript, and Tailwind CSS using the shadcn/ui component library.
 
 Live at **[tukue-portofilo.netlify.app](https://tukue-portofilo.netlify.app/)**.
