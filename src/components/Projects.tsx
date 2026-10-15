@@ -1,10 +1,21 @@
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowUpRight, Github, ExternalLink } from 'lucide-react';
+import { ArrowUpRight, Github, ExternalLink, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  details: string[];
+  tags: string[];
+  githubUrl?: string;
+  demoUrl?: string;
+  featured?: boolean;
+  private?: boolean;
+}
+
+const projects: Project[] = [
   {
     title: 'AWS FinOps Container Optimization for AI Workloads',
     description: 'Reference implementation of FinOps best practices for optimizing ECS/EKS-based AI workloads on AWS. Achieve cost optimization through spot instances, autoscaling, and intelligent resource management.',
@@ -220,15 +231,63 @@ const projects = [
             demoUrl: '#',
             githubUrl: 'https://github.com/tukue/shopease-ecomerce',
                featured: true
-               },   { title : 'Developed Fullstack book recommender web application',
-                       description : 'A Book recommender App is a web-based application that recommends self improvement and growth books',
-                       details : [
-                           ' Built wit nodejs javascript ', ' Backend Integrated with supabase', 'Integration with open Library API for cover pages', ' Integrated with spotify to listen to audio books ', ' CI/CD pipeline setup with github action  '
-                           ],
-                           tags:[' Fullstack development', 'Nodejs Backend development', 'DevOps', 'CI/CD', ' github action',' DevSecOps ' ] ,
-                           demourl: '#',
-                           featured: true
-                }
+                },   {
+                  title: 'Book Notes App for Avid Readers',
+                  description: 'Book Notes MVP for avid readers — save notes, discover self-improvement books, and listen via Spotify. Full CRUD: User → React frontend → Express controllers → Supabase PostgreSQL, deployed on Render.',
+                  details: [
+                            'Backend: Node.js + Express.js + Supabase PostgreSQL (@supabase/supabase-js), dotenv',
+                            'Frontend: React + HTML5/CSS3/ES6 + Bootstrap',
+                            'Open Library API for covers, Spotify integration for audiobooks',
+                            'Tested with Jest + Supertest, CI/CD via GitHub Actions, deployed on Render'
+                            ],
+                            tags: ['Node.js', 'Express', 'Supabase', 'PostgreSQL', 'React', 'Bootstrap', 'Jest', 'GitHub Actions', 'Render', 'Spotify'],
+                            demoUrl: 'https://book-notes-app-tfwv.onrender.com',
+                            featured: true,
+                            private: true
+                  },
+                  {
+                    title: 'MetaFlow — Metabolic Health Coaching App',
+                    description: 'Metabolic health coaching MVP helping users build balanced habits — tracking, guidance, and coaching insights for sustainable wellbeing.',
+                    details: [
+                              'Built with Vite, TypeScript, and React',
+                              'UI with shadcn/ui and Tailwind CSS',
+                              'Habit tracking and progress insights',
+                              'Deployed on Vercel with CI/CD'
+                              ],
+                              tags: ['Vite', 'TypeScript', 'React', 'shadcn/ui', 'Tailwind CSS', 'HealthTech', 'Vercel', 'CI/CD'],
+                              demoUrl: 'https://metabol-balance-app-pdur.vercel.app/',
+                              featured: true,
+                              private: true
+                  },
+                  {
+                    title: 'FitShop — Multi-Tenant SaaS E-Commerce Platform',
+                    description: 'Production-grade multi-tenant SaaS e-commerce platform that lets fitness-equipment merchants spin up an isolated storefront in minutes — catalog, cart, Stripe checkout, and subscription billing behind a single API surface.',
+                    details: [
+                              'Next.js 16 App Router with RSC product catalog and client-side cart/checkout',
+                              'Neon serverless Postgres with three-layer tenant isolation (app, session, schema)',
+                              'Stripe Checkout + Subscriptions with idempotent webhook-driven billing lifecycle',
+                              'Optimistic concurrency inventory (SELECT ... FOR UPDATE) and funnel analytics without third-party trackers',
+                              '43 integration tests (Node test runner) + Playwright e2e; mock DB mode for local/CI'
+                              ],
+                              tags: ['Next.js 16', 'TypeScript', 'Neon Postgres', 'Stripe', 'NextAuth v5', 'Tailwind CSS v4', 'Playwright', 'Multi-Tenancy', 'Vercel'],
+                              demoUrl: 'https://ecommerce-app-ecru-nine.vercel.app/',
+                              featured: true,
+                              private: true
+                  },
+                  {
+                    title: 'Modern Portfolio Website',
+                    description: 'Responsive and modern portfolio website showcasing projects, skills, and experience as a Fullstack, Backend, and DevOps Developer.',
+                    details: [
+                              'Built with React, TypeScript, and Vite',
+                              'Tailwind CSS + shadcn/ui, React Router, TanStack Query',
+                              'Contact form with EmailJS, Vitest + Testing Library',
+                              'Deployed on Netlify with SPA redirects'
+                              ],
+                              tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Netlify'],
+                              githubUrl: 'https://github.com/tukue/personal-web-refresh',
+                              demoUrl: 'https://tukue-portofilo.netlify.app/',
+                              featured: true
+                  }
 
 ];
 
@@ -289,7 +348,25 @@ const Projects = () => {
                 {project.tags.map(tag => (
                   <Badge key={tag} variant="secondary" className="font-normal text-xs">{tag}</Badge>
                 ))}
+                {project.private && (
+                  <Badge variant="outline" className="font-normal text-xs flex items-center gap-1">
+                    <Lock className="h-3 w-3" /> Private repo
+                  </Badge>
+                )}
               </div>
+              {project.demoUrl && project.demoUrl !== '#' && (
+                <Button variant={project.githubUrl ? "outline" : "default"} size="sm" className="w-full mt-2" asChild>
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Live Demo
+                  </a>
+                </Button>
+              )}
               {project.githubUrl && (
                 <Button variant="outline" size="sm" className="w-full mt-2" asChild>
                   <a 
