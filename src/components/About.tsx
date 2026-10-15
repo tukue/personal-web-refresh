@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Github, Linkedin, Mail, MapPin, Globe } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
 
 const About = () => {
   const languages = [
@@ -26,6 +26,9 @@ const About = () => {
                 alt="Tukue Gebremariam" 
                 className="object-cover w-full h-full"
                 decoding="async"
+                onError={(event) => {
+                  event.currentTarget.style.display = 'none';
+                }}
               />
             </div>
             
@@ -40,13 +43,6 @@ const About = () => {
               <div className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-primary" />
                 <span>Stockholm, Sweden</span>
-              </div>
-              
-              <div className="flex items-center gap-3">
-                <Globe className="h-5 w-5 text-primary" />
-                <a href="https://github.com/tukue" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  github.com/tukue
-                </a>
               </div>
             </div>
             
