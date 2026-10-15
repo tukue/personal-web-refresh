@@ -22,10 +22,9 @@ const About = () => {
           <div className="md:col-span-2 flex flex-col items-center md:items-start space-y-6">
             <div className="relative w-64 h-64 rounded-xl overflow-hidden border-4 border-primary/20 shadow-xl">
               <img 
-                src="/profile.jpg"
+                src="/profile-photo.jpg"
                 alt="Tukue Gebremariam" 
                 className="object-cover w-full h-full"
-                loading="lazy"
                 decoding="async"
               />
             </div>
