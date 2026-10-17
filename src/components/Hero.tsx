@@ -30,7 +30,7 @@ const Hero = () => {
           Senior DevOps Engineer & Backend Developer
         </p>
         <p className="text-md md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Stockholm, Sweden · Open to remote opportunities
+          Stockholm, Sweden · Open to work
         </p>
       </div>
       <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
