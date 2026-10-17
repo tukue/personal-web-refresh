@@ -56,7 +56,7 @@ The site is a single-page application (SPA) with the following structure:
 >
 > **MetaFlow (Metabolic Health) MVP stack:** Frontend — Vite, TypeScript, React, shadcn/ui, Tailwind CSS. Dev & Deploy — CI/CD via GitHub Actions, hosted on Vercel.
 >
-> **FitShop (Multi-Tenant E-commerce) MVP stack:** Framework — Next.js 16 (App Router, RSC). Database — Neon serverless Postgres with row-level tenant isolation. Auth — NextAuth v5 (JWT, tenant ID in session). Payments — Stripe Checkout + Subscriptions with idempotent webhook handling. Styling — Tailwind CSS v4. Testing — Node test runner (43 integration tests) + Playwright e2e. Dev & Deploy — Vercel, in-memory mock mode (`USE_DB_MOCK=true`) for local/CI without a database.
+> **FitShop (Multi-Tenant E-commerce) MVP stack:** Framework — Next.js 16 (App Router, RSC). Database — Neon serverless Postgres with row-level tenant isolation. Auth — NextAuth v5 (JWT, tenant ID in session). Payments — Stripe Checkout + Subscriptions with idempotent webhook handling. Styling — Tailwind CSS v4. Testing — Node test runner integration tests + Playwright e2e. Dev & Deploy — Vercel, in-memory mock mode (`USE_DB_MOCK=true`) for local/CI without a database.
 
 ### DevOps / Cloud Automation MVPs
 

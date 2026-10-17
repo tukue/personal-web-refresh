@@ -18,7 +18,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: 'MetaFlow — Metabolic Health App',
-    description: 'Independent product build — a metabolic health companion that turns daily habits into guided coaching, progress tracking, and personalized wellbeing guidance.',
+    description: 'A metabolic health companion that turns daily habits into guided coaching, progress tracking, and personalized wellbeing guidance.',
     details: [
       'Personalized coaching, habit tracking, and daily guidance for metabolic wellbeing',
       'Type-safe frontend architected with Vite, React, and TypeScript',
@@ -33,7 +33,7 @@ const projects: Project[] = [
   },
   {
     title: 'Book Recommender App for Avid Readers',
-    description: 'Independent fullstack app that recommends self-improvement and growth books, with reading notes, curated cover art, and companion audiobooks.',
+    description: 'An app that recommends self-improvement and growth books, with reading notes, curated cover art, and companion audiobooks.',
     details: [
       'Node.js and Express backend with Supabase (PostgreSQL) for books, notes, and users',
       'Personalized self-improvement and growth-book recommendations for avid readers',
@@ -49,13 +49,13 @@ const projects: Project[] = [
   },
   {
     title: 'FitShop — Multi-Tenant SaaS E-Commerce Platform',
-    description: 'Independent SaaS platform where fitness-equipment merchants spin up isolated storefronts in minutes — catalog, cart, Stripe checkout, and subscription billing.',
+    description: 'Multi-tenant SaaS e-commerce platform where fitness-equipment merchants spin up isolated storefronts in minutes — catalog, cart, Stripe checkout, and subscription billing.',
     details: [
       'Next.js App Router with React Server Components and server-side data fetching',
       'Neon serverless Postgres with row-level tenant isolation',
       'NextAuth v5 sessions carrying tenant ID for scoped, secure access',
       'Stripe Checkout and subscriptions with idempotent webhook handling',
-      '43 integration tests (Node test runner) plus Playwright e2e, deployed on Vercel',
+      'Integration and end-to-end tests with Node test runner and Playwright, deployed on Vercel',
       'Private repository — live demo available'
     ],
     tags: ['Independent Project', 'Next.js', 'TypeScript', 'PostgreSQL', 'Stripe', 'NextAuth', 'Playwright', 'Vercel'],
