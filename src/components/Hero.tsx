@@ -38,7 +38,7 @@ const Hero = () => {
           <a href="#contact">Contact Me</a>
         </Button>
         <Button asChild size="lg" variant="secondary">
-          <a href="/Tukue-Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+          <a href="/Tukue-Gebremariam-CV.pdf?v=20261017" target="_blank" rel="noopener noreferrer">View Resume</a>
         </Button>
       </div>
       <div className="flex gap-6 mt-12 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>

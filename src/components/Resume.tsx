@@ -104,7 +104,7 @@ const Resume = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Resume</h2>
           <Button variant="outline" className="mt-4 md:mt-0" asChild>
-            <a href="/Tukue-Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <a href="/Tukue-Gebremariam-CV.pdf?v=20261017" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <FileText className="h-4 w-4" />
               View Full Resume
             </a>

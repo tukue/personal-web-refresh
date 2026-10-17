@@ -20,7 +20,7 @@ const ResumeViewer = () => {
         </div>
         <div className={`relative ${isFullScreen ? 'fixed inset-0 z-50 bg-background p-6' : 'h-[600px]'}`}>
           <iframe
-            src="/Tukue-Resume.pdf"
+            src="/Tukue-Gebremariam-CV.pdf?v=20261017"
             className="w-full h-full border-none"
             title="Tukue's Resume"
           />
