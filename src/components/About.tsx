@@ -81,20 +81,25 @@ const About = () => {
                 <h3 className="text-xl font-semibold mb-4">Professional Summary</h3>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    I'm a DevOps Engineer and Backend Developer with a background in cloud computing and networking. 
-                    I've been fortunate to work with companies like Ericsson, Discovery Network Sweden, and Digital Route 
-                    where I've contributed to developing cloud solutions, implementing infrastructure as code, and building 
-                    scalable backend systems.
+                    Backend Developer and Platform Engineer with experience across DevOps, Site Reliability Engineering (SRE), 
+                    and Cloud Engineering — building cloud-native applications, scalable backend services, and reliable platforms 
+                    that enable teams to deliver software efficiently.
                   </p>
                   <p>
-                    Throughout my career, I've worked with AWS, Azure, and Google Cloud platforms, gaining experience with 
-                    containerization, orchestration, and CI/CD pipelines. I enjoy working with Java, Python, and Node.js 
-                    for backend development, and I've implemented infrastructure automation using Terraform and CloudFormation
-                    to provision and manage cloud resources.
+                    Experienced in Java, Spring Boot, Python, Node.js, AWS, Azure, Kubernetes, Docker, Terraform, Infrastructure 
+                    as Code (IaC), GitOps, and CI/CD. My experience includes microservices, REST APIs, distributed systems, 
+                    event-driven architectures, cloud infrastructure, automation, observability, cloud security, and developer experience.
                   </p>
                   <p>
-                    My goal is to build resilient, secure, and scalable systems that solve real business problems. I believe 
-                    in combining technical solutions with business understanding to deliver value to stakeholders.
+                    I enjoy understanding business challenges and translating them into practical, scalable technical solutions. 
+                    I focus on building secure and reliable systems, automating infrastructure and software delivery, and improving 
+                    developer experience. I thrive in collaborative, cross-functional teams where ownership, knowledge sharing, and 
+                    continuous improvement contribute to successful outcomes.
+                  </p>
+                  <p>
+                    Alongside Backend and Platform Engineering, I continue expanding my knowledge in AI Engineering, Generative AI, 
+                    Large Language Models (LLMs), AI-powered applications, and developer tools. I recently completed the AI for 
+                    Technical Leaders course from Quantic, strengthening my understanding of practical AI adoption and AI strategy.
                   </p>
                 </div>
               </CardContent>
@@ -118,21 +123,34 @@ const About = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-4">Core Competencies</h3>
                 <div className="flex flex-wrap gap-2">
-                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Cloud Architecture</Badge>
-                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Infrastructure as Code</Badge>
-                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">CI/CD Pipelines</Badge>
-                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Containerization</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Backend Engineering</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Platform Engineering</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">DevOps</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Site Reliability Engineering (SRE)</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Cloud Engineering</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">AWS</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Azure</Badge>
                   <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Kubernetes</Badge>
-                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Microservices</Badge>
-                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">AWS Services</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Docker</Badge>
                   <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Terraform</Badge>
-                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">API Development</Badge>
-                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Backend Systems</Badge>
-                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Security Best Practices</Badge>
-                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Monitoring & Observability</Badge>
-                    <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">DevSecOps</Badge>
-                  
-
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Java</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Spring Boot</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Python</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Node.js</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Microservices</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">REST APIs</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Distributed Systems</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Event-Driven Architecture</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Infrastructure as Code (IaC)</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">GitOps</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">CI/CD</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Observability</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Automation</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Cloud Security</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Developer Experience (DevEx)</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">AI Engineering</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">Generative AI</Badge>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">LLMs</Badge>
                 </div>
               </CardContent>
             </Card>
