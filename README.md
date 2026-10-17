@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website for Tukue Gebremariam, a DevOps Engineer and Backend Developer. This project showcases my professional experience, projects, skills, and contact information in a clean, modern interface built with React, TypeScript, and Tailwind CSS using the shadcn/ui component library.
 
-Live at **[tukue-portofilo.netlify.app](https://tukue-portofilo.netlify.app/)**.
+Live at **[tukue-profile.netlify.app](https://tukue-profile.netlify.app/)**.
 
 ## System Architecture
 
@@ -48,7 +48,7 @@ The site is a single-page application (SPA) with the following structure:
 | 6 | **ShopEase E-commerce** | Responsive fullstack shop — catalog, cart, payments, Supabase backend | React, TypeScript, Supabase, GitHub Actions | [shopease-ecomerce](https://github.com/tukue/shopease-ecomerce) |
 | 7 | **Node.js E-commerce REST API** | Secure JWT CRUD API for products/orders with Swagger docs | Node.js, Express, Sequelize, PostgreSQL, Swagger | [ecommerce-api](https://github.com/tukue/ecommerce-api) |
 | 8 | **EKS Spring Boot Microservices** | Terraform-provisioned EKS + ECR + CloudWatch via GitHub Actions pipeline | Terraform, AWS EKS/ECR, Docker, GitHub Actions | [grocery-microservices](https://github.com/tukue/grocery-microservices) |
-| 9 | **Modern Portfolio Website** — [Live Demo](https://tukue-portofilo.netlify.app/) | A responsive and modern portfolio website built with React, TypeScript, and Vite. Showcases projects, skills, and experience as a Fullstack, Backend, and DevOps Developer. | React, TypeScript, Vite, Tailwind, shadcn/ui, Netlify | [personal-web-refresh](https://github.com/tukue/personal-web-refresh) |
+| 9 | **Modern Portfolio Website** — [Live Demo](https://tukue-profile.netlify.app/) | A responsive and modern portfolio website built with React, TypeScript, and Vite. Showcases projects, skills, and experience as a Fullstack, Backend, and DevOps Developer. | React, TypeScript, Vite, Tailwind, shadcn/ui, Netlify | [personal-web-refresh](https://github.com/tukue/personal-web-refresh) |
 
 > 🔒 = private GitHub repo — code on request, live demo linked.
 >
