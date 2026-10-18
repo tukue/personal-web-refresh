@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowUpRight, Github, ExternalLink, Lock } from 'lucide-react';
+import { Github, ExternalLink, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 type Project = {
@@ -16,6 +16,35 @@ type Project = {
 };
 
 const projects: Project[] = [
+  {
+    title: 'Platform Engineering DevSecOps Advisor',
+    description: 'AI-assisted DevSecOps advisor that classifies platform-security findings and provides actionable remediation guidance for platform engineering and SRE teams.',
+    details: [
+      'Hybrid classification: rule-based detection plus multi-model zero-shot ensemble voting',
+      'RAG pipeline with TF-IDF + keyword hybrid search, query expansion, and reranking over a security knowledge base',
+      '6-layer prompt injection defense with PII masking and output safety filtering',
+      'Chain-of-thought reasoning, conversation memory, and full observability (structured logs, Prometheus metrics, health checks)',
+      '72-test suite with GitHub Actions CI/CD, deployed on Hugging Face Spaces'
+    ],
+    tags: ['DevSecOps', 'Agentic Workflow', 'RAG', 'Python', 'Gradio', 'Responsible AI', 'Hugging Face Spaces'],
+    githubUrl: 'https://github.com/tukue/devsecops-platform-agent',
+    demoUrl: 'https://huggingface.co/spaces/Tukue/platform-eng-agent-advisor',
+    featured: true
+  },
+  {
+    title: 'Customer Support AI Chatbot',
+    description: 'E-commerce customer-support AI chatbot with guardrails, hybrid RAG retrieval over FAQ and product catalogs, and an optional generative fallback.',
+    details: [
+      'Hybrid architecture: deterministic intent routing first, DialoGPT generative fallback second',
+      'Input/output guardrails for PII, profanity, prompt injection, and off-topic prompts — fail-closed by design',
+      'TF-IDF + stemming retrieval over FAQ and product knowledge bases with zero external dependencies',
+      'Env-driven configuration, Docker support, and GitHub Actions CI/CD with OIDC auto-deploy to Hugging Face Spaces'
+    ],
+    tags: ['Agentic Workflow', 'Prompt Injection Protection', 'Python', 'Responsible AI', 'RAG', 'Gradio', 'Hugging Face Spaces'],
+    githubUrl: 'https://github.com/tukue/conversational-ai-chatbot',
+    demoUrl: 'https://huggingface.co/spaces/Tukue/customer-support-ai',
+    featured: true
+  },
   {
     title: 'MetaFlow — Metabolic Health App',
     description: 'A metabolic health companion that turns daily habits into guided coaching, progress tracking, and personalized wellbeing guidance.',
@@ -317,7 +346,7 @@ const Projects = () => {
                       <Github className="h-5 w-5" />
                     </span>
                   )}
-                  {project.demoUrl && project.demoUrl !== '#'&& (
+                  {project.demoUrl && project.demoUrl !== '#' && (
                     <a 
                       href={project.demoUrl}
                       target="_blank" 
