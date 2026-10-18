@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowUpRight, Github, ExternalLink, Lock } from 'lucide-react';
+import { Github, ExternalLink, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 type Project = {
@@ -346,7 +346,7 @@ const Projects = () => {
                       <Github className="h-5 w-5" />
                     </span>
                   )}
-                  {project.demoUrl && project.demoUrl !== '#'&& (
+                  {project.demoUrl && project.demoUrl !== '#' && (
                     <a 
                       href={project.demoUrl}
                       target="_blank" 
