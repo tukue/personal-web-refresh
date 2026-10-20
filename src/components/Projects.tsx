@@ -22,11 +22,10 @@ const projects: Project[] = [
     details: [
       'Hybrid classification: rule-based detection plus multi-model zero-shot ensemble voting',
       'RAG pipeline with TF-IDF + keyword hybrid search, query expansion, and reranking over a security knowledge base',
-      '6-layer prompt injection defense with PII masking and output safety filtering',
       'Chain-of-thought reasoning, conversation memory, and full observability (structured logs, Prometheus metrics, health checks)',
-      '72-test suite with GitHub Actions CI/CD, deployed on Hugging Face Spaces'
+      'Automated test suite with GitHub Actions CI/CD, deployed on Hugging Face Spaces'
     ],
-    tags: ['DevSecOps', 'Agentic Workflow', 'RAG', 'Python', 'Gradio', 'Responsible AI', 'Hugging Face Spaces'],
+    tags: ['Independent Project', 'DevSecOps', 'Agentic Workflow', 'RAG', 'Python', 'Gradio', 'Responsible AI', 'Hugging Face Spaces'],
     githubUrl: 'https://github.com/tukue/devsecops-platform-agent',
     demoUrl: 'https://huggingface.co/spaces/Tukue/platform-eng-agent-advisor',
     featured: true
@@ -40,7 +39,7 @@ const projects: Project[] = [
       'TF-IDF + stemming retrieval over FAQ and product knowledge bases with zero external dependencies',
       'Env-driven configuration, Docker support, and GitHub Actions CI/CD with OIDC auto-deploy to Hugging Face Spaces'
     ],
-    tags: ['Agentic Workflow', 'Prompt Injection Protection', 'Python', 'Responsible AI', 'RAG', 'Gradio', 'Hugging Face Spaces'],
+    tags: ['Independent Project', 'Agentic Workflow', 'Prompt Injection Protection', 'Python', 'Responsible AI', 'RAG', 'Gradio', 'Hugging Face Spaces'],
     githubUrl: 'https://github.com/tukue/conversational-ai-chatbot',
     demoUrl: 'https://huggingface.co/spaces/Tukue/customer-support-ai',
     featured: true
