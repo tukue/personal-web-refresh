@@ -9,8 +9,7 @@ const About = () => {
     { name: "Swedish", level: "Basic conversational" },
     { name: "French", level: "Basic conversational" },
     { name: "Amharic", level: "Native" },
-    { name: "Tigrigna", level: "Native" },
-    { name: "TypeScript", level: "Programming" }
+    { name: "Tigrigna", level: "Native" }
   ];
 
   return (

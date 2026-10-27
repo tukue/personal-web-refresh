@@ -29,6 +29,7 @@ const ResumeSection = () => {
                 <li>Java</li>
                 <li>Python</li>
                 <li>JavaScript</li>
+                <li>TypeScript</li>
               </ul>
             </div>
             <div className="skill-category">
