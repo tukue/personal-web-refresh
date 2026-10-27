@@ -10,11 +10,11 @@ const Hero = () => {
       <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
         <a
           href="#contact"
-          className="inline-flex items-center gap-2 rounded-full border border-green-600/40 bg-green-600/10 px-4 py-2 text-sm font-medium text-green-700 dark:text-green-400 transition-colors hover:bg-green-600/20"
+          className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/15"
         >
           <span className="relative flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
           </span>
           Open for work — actively seeking Senior Backend &amp; Platform Engineering roles
         </a>
@@ -34,7 +34,7 @@ const Hero = () => {
         </p>
       </div>
       <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-        <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
+        <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
           <a href="#contact">Contact Me</a>
         </Button>
         <Button asChild size="lg" variant="secondary">
