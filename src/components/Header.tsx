@@ -27,11 +27,11 @@ const Header = () => {
           </nav>
           <a
             href="#contact"
-            className="inline-flex items-center gap-1.5 rounded-full border border-green-600/40 bg-green-600/10 px-3 py-1 text-xs font-medium text-green-700 transition-colors hover:bg-green-600/20 dark:text-green-400"
+            className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary transition-colors hover:bg-primary/15"
           >
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
             Open for work
           </a>

@@ -153,10 +153,10 @@ const Resume = () => {
                   <h4 className="text-xl font-semibold flex items-center gap-3">
                     {job.title}
                     {job.current && (
-                      <Badge className="bg-green-600/15 text-green-700 dark:text-green-400 border border-green-600/40 hover:bg-green-600/20">
+                      <Badge className="bg-primary/10 text-primary border border-primary/30 hover:bg-primary/15">
                         <span className="relative mr-1.5 flex h-2 w-2">
-                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
-                          <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+                          <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
                         </span>
                         Open for work
                       </Badge>
