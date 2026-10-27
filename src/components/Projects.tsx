@@ -350,7 +350,7 @@ const Projects = () => {
                       href={project.demoUrl}
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="rounded-sm text-amber-300 hover:text-amber-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                       aria-label={`Live demo for ${project.title}`}
                     >
                       <ExternalLink className="h-5 w-5" />
@@ -376,7 +376,7 @@ const Projects = () => {
                 ))}
               </div>
               {project.demoUrl && project.demoUrl !== '#' && (
-                <Button size="sm" className="w-full mt-2" asChild>
+                <Button size="sm" className="w-full mt-2 bg-amber-300 text-slate-950 hover:bg-amber-200 focus-visible:ring-amber-300" asChild>
                   <a
                     href={project.demoUrl}
                     target="_blank"
