@@ -6,7 +6,7 @@ const ResumeSection = () => {
         <div className="resume-section">
           <h3>Certifications</h3>
           <ul className="certification-list">
-            <li>System verification - ISTQB Certified Tester Foundation</li>
+            <li>Certified Tester Foundation</li>
             <li>Java design pattern certification</li>
             <li>Certified AWS Cloud Practitioner</li>
             <li>Certified AWS Solution Architect Associate</li>

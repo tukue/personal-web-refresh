@@ -15,7 +15,7 @@ type WorkExperience = {
 
 const Resume = () => {
   const certifications = [
-    'System verification - ISTQB Certified Tester Foundation',
+    'Certified Tester Foundation',
     'Java design pattern certification',
     'Certified AWS Cloud Practitioner',
     'Certified AWS Solution Architect Associate',
