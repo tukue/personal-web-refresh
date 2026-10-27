@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 const Hero = () => {
   return (
-    <section id="home" className="flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] text-center py-20">
+    <section id="home" className="hero-surface flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] text-center py-20">
       <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
         <a
           href="#contact"
@@ -20,7 +20,7 @@ const Hero = () => {
         </a>
       </div>
       <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-        <Avatar className="h-32 w-32 mx-auto mb-6">
+        <Avatar className="h-32 w-32 mx-auto mb-6 ring-1 ring-primary/30 shadow-xl shadow-primary/10">
           <AvatarFallback>TG</AvatarFallback>
         </Avatar>
         <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-3 text-foreground">
@@ -34,7 +34,7 @@ const Hero = () => {
         </p>
       </div>
       <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-        <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+        <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/15">
           <a href="#contact">Contact Me</a>
         </Button>
         <Button asChild size="lg" variant="secondary">
