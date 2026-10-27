@@ -29,7 +29,7 @@ const Resume = () => {
   const skillCategories = [
     {
       title: 'Programming',
-      skills: ['C', 'C++', 'Java', 'Python', 'JavaScript'],
+      skills: ['C', 'C++', 'Java', 'Python', 'JavaScript', 'TypeScript'],
     },
     {
       title: 'Backend Technologies',
