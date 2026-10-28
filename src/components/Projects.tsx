@@ -17,6 +17,14 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'Real-Time Mobility — Stockholm Public Transport',
+    description: 'A full-stack application connecting Stockholm\'s public transit data (SL Trafiklab APIs) to a responsive dashboard. Built with React + TypeScript on the frontend and Python FastAPI on the backend, containerized with Docker, and deployed via CI/CD.',
+    tags: ['React', 'TypeScript', 'Vite', 'Python', 'FastAPI', 'httpx', 'Pydantic', 'slowapi', 'Supabase (PostgreSQL, optional)', 'Docker', 'GitHub Actions', 'Trivy', 'Render'],
+    githubUrl: 'https://github.com/tukue/realtime-mobility',
+    demoUrl: 'https://realtime-mobility-planer.onrender.com/',
+    featured: true
+  },
+  {
     title: 'Platform Engineering DevSecOps Advisor',
     description: 'AI-assisted DevSecOps advisor that classifies platform-security findings and provides actionable remediation guidance for platform engineering and SRE teams.',
     details: [
