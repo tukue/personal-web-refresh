@@ -133,16 +133,16 @@ const projects: Project[] = [
     demoUrl: '#'
   },
   {
-    title: 'Serverless React Application with AWS Amplify',
-    description: 'Built a full-stack serverless application using React and AWS Amplify with Lambda functions, API Gateway, and DynamoDB.',
+    title: 'Full-Stack React Application with AWS Amplify',
+    description: 'A live full-stack web application built with React and AWS services, deployed through AWS Amplify with infrastructure defined as code.',
     details: [
       'Serverless backend with AWS Lambda functions and API Gateway',
       'Data persistence using DynamoDB with Amplify DataStore',
       'Authentication and authorization with Amazon Cognito',
-      'Automated deployments through Amplify Console'
+      'AWS Amplify manages deployment and infrastructure as code'
     ],
-    tags: ['React', 'AWS Amplify', 'Lambda', 'API Gateway', 'DynamoDB'],
-    demoUrl: '#'
+    tags: ['React', 'AWS Amplify', 'Lambda', 'API Gateway', 'DynamoDB', 'Infrastructure as Code'],
+    demoUrl: 'https://fullstackwebapp.d1sm4f16txh1pv.amplifyapp.com'
   },
   {
     title: 'DevOps Infrastructure Automation on AWS with Terraform, Ansible, and GitOps Tools',
